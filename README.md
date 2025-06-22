@@ -1,2 +1,4 @@
-# momokona-CppMiniGame_BattleSimulator
-簡単なコマンドバトルのゲームです。初めて一人でゲームを作成します。STLの使用になれるために実装しています。
+# CppMiniGame_BattleSimulator
+簡単なコマンドバトルのゲームです。
+初めて一人でゲームを作成します。
+STLの使用になれるために実装しています。
