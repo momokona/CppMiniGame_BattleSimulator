@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="ソース ファイル">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="ヘッダー ファイル">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="リソース ファイル">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="ソース ファイル\character">
+      <UniqueIdentifier>{9cee65dc-9562-400d-a8aa-ee5167190014}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\character">
+      <UniqueIdentifier>{e48d8ba1-47cf-4b87-9061-1625c5f2cdd0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\game_mode">
+      <UniqueIdentifier>{3741c140-da7b-481e-ace8-537fc3fd9cbf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\game_mode">
+      <UniqueIdentifier>{0dd23c7b-a5f1-4667-9c89-39c604f5d811}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="KonaBattle.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="character\chara_base.cpp">
+      <Filter>ソース ファイル\character</Filter>
+    </ClCompile>
+    <ClCompile Include="game_mode\BattleLogManager.cpp">
+      <Filter>ソース ファイル\game_mode</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="character\chara_base.h">
+      <Filter>ヘッダー ファイル\character</Filter>
+    </ClInclude>
+    <ClInclude Include="game_mode\BattleLogManager.h">
+      <Filter>ヘッダー ファイル\game_mode</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
