@@ -111,3 +111,5 @@ CharaBaseクラスを作成した。
 | 行動選択のロジック   | `std::map<ActionType, ActionInfo>` などを使うと行動選択が柔軟に |
 | 状態異常の持続ターン数 | `std::map<State, int>` などにしてターン管理できるようにする         |
 | UIの分離 | UIマネージャーを作り、表示の分離を行う         |
+
+あとはpriority_queueとかきいたことないので使ってみたい
