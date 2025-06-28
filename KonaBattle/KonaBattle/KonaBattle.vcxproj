@@ -127,6 +127,8 @@
   <ItemGroup>
     <ClCompile Include="character\character_manager.cpp" />
     <ClCompile Include="character\chara_base.cpp" />
+    <ClCompile Include="character\enemy.cpp" />
+    <ClCompile Include="character\player.cpp" />
     <ClCompile Include="game_mode\log_manager.cpp" />
     <ClCompile Include="KonaBattle.cpp" />
     <ClCompile Include="ui\ui_manager.cpp" />
@@ -134,6 +136,8 @@
   <ItemGroup>
     <ClInclude Include="character\character_manager.h" />
     <ClInclude Include="character\chara_base.h" />
+    <ClInclude Include="character\enemy.h" />
+    <ClInclude Include="character\player.h" />
     <ClInclude Include="defs.h" />
     <ClInclude Include="game_mode\log_manager.h" />
     <ClInclude Include="ui\ui_manager.h" />

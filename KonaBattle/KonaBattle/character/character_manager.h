@@ -1,4 +1,7 @@
 #pragma once
+#include "enemy.h"
+#include "player.h"
+
 class CharacterManager
 {
 public:
@@ -11,11 +14,14 @@ public:
 	{
 		return chara_manager_;
 	}
+	// 1ターンごとのリセット
+	void SetParamForNextTurn();
 
 private:
 	CharacterManager() {};
 	CharacterManager(const CharacterManager& other) {};
 private:
 	static CharacterManager* chara_manager_;
+	Player* player_{};
 	
 };

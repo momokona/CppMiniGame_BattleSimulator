@@ -79,6 +79,34 @@ void CharaBase::ReflectState()
 	}
 }
 
+void CharaBase::Act(CharaBase& target)
+{
+	const BehaviorPattern BEHAVIOR = GetBehavior();
+	if (BEHAVIOR == BehaviorPattern::ATTACK)
+	{
+		target.SufferAttack(attack_, NAME_);
+	}
+	else if (BEHAVIOR == BehaviorPattern::DEFENSE)
+	{
+		defense_ *= character::DEFENSE_MAGNIFICATION;
+	}
+	else if(BEHAVIOR == BehaviorPattern::ITEM)
+	{
+		// アイテムを使った時の処理を書く
+	}
+	else if (BEHAVIOR == BehaviorPattern::POISON)
+	{
+		if (CHARA_TYPE_ == character::CharaType::PLAYER)
+		{
+			// 毒攻撃を使えるのは敵だけ
+			// アサート処理にかけたい
+			return;
+		}
+		target.SufferAttack(POISON_DAMAGE, NAME_);
+		target.SetState(character::State::POISON);
+	}
+}
+
 void CharaBase::CalcHp(const int DAMAGE)
 {
 	hp_ -= DAMAGE;

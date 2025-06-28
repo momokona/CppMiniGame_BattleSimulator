@@ -48,6 +48,12 @@
     <ClCompile Include="ui\ui_manager.cpp">
       <Filter>ソース ファイル\ui</Filter>
     </ClCompile>
+    <ClCompile Include="character\enemy.cpp">
+      <Filter>ソース ファイル\character</Filter>
+    </ClCompile>
+    <ClCompile Include="character\player.cpp">
+      <Filter>ソース ファイル\character</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="character\chara_base.h">
@@ -63,6 +69,12 @@
       <Filter>ヘッダー ファイル\character</Filter>
     </ClInclude>
     <ClInclude Include="defs.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="character\enemy.h">
+      <Filter>ヘッダー ファイル\character</Filter>
+    </ClInclude>
+    <ClInclude Include="character\player.h">
       <Filter>ヘッダー ファイル\character</Filter>
     </ClInclude>
   </ItemGroup>

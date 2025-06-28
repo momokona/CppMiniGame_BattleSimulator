@@ -1,5 +1,7 @@
 #include "log_manager.h"
 #include <iostream>
+#include"../defs.h"
+
 
 void BattleLogManager::ShowLog()
 {

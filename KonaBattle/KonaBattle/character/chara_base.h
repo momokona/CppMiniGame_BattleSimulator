@@ -2,6 +2,8 @@
 #include <string>
 #include <set>
 #include <vector>
+#include"../defs.h"
+
 namespace character
 {
 	// 状態
@@ -12,14 +14,14 @@ namespace character
 		NUM,
 	};
 
-
-
 	// キャラクターの種類
 	enum class CharaType
 	{
-		Player = 0,		// 主人公
+		PLAYER = 0,		// 主人公
 		ENEMY,		// 敵
 	};
+
+	constexpr int DEFENSE_MAGNIFICATION = 2;	// 防御を選んだ時の防御率
 }	// namespace character
 
 // キャラクターのBaseクラス
@@ -36,9 +38,14 @@ public:
 	{
 		return hp_ <= 0;
 	}
-private:
+	void Act(CharaBase& target);
+protected:
 	void CalcHp(const int DAMAGE);
-private:
+	virtual const BehaviorPattern GetBehavior()
+	{
+		return BehaviorPattern::INVALID;	// 継承先で実装
+	}
+protected:
 	std::set<character::State> states_{};	// 状態
 	const std::string NAME_{};	// 名前
 	const character::CharaType CHARA_TYPE_{ character::CharaType::ENEMY };

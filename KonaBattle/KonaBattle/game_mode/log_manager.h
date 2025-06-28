@@ -8,13 +8,7 @@ namespace game_mode
 
 }	// namespace game_mode
 
-// 行動パターン(ログ用)
-enum class BehaviorPattern
-{
-	ATTACK = 0,	// 攻撃
-	DEFENSE,	// 防御
-	ITEM,		// アイテム
-};
+
 struct ActionLog
 {
     const std::string ACtOR_NAME;         // 行動したキャラ名
