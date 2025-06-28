@@ -1,4 +1,5 @@
 #include"chara_base.h"
+#include "../ui/ui_manager.h"
 
 constexpr int POISON_DAMAGE = 10;
 
@@ -22,12 +23,18 @@ void CharaBase::Initialize()
 	states_.clear();
 }
 
+
 void CharaBase::SufferAttack(const int OPPONENT_ATTACK, const std::string OPPONENT_NAME)
 {
 	// ダメージの計算
 	const int DAMAGE = OPPONENT_ATTACK - defense_;
-	printf("%sは%sに%dのダメージを与えた！\n", OPPONENT_NAME, NAME_, DAMAGE);
 	CalcHp(DAMAGE);
+	const auto ui_manager = UiManager::GetUiManager();
+	if (!ui_manager)
+	{
+		return;
+	}
+	ui_manager->DispBattleInfo(DispInfo(OPPONENT_NAME, NAME_, DAMAGE, hp_));
 }
 
 void CharaBase::SetState(character::State state)
@@ -49,7 +56,7 @@ void CharaBase::SetState(character::State state)
 	states_.insert(state);
 }
 
-//	状態を反映させる
+//	状態を反映させる(自分が攻撃を受ける側の時に毎回反映させる)
 void CharaBase::ReflectState()
 {
 	for (const auto state : states_)
@@ -78,10 +85,5 @@ void CharaBase::CalcHp(const int DAMAGE)
 	if (IsDead())
 	{
 		hp_ = 0;
-	}
-	printf("%sの残りのHPは%dになった。\n", NAME_, hp_);
-	if (IsDead())
-	{
-		printf("%sの負け！\n", NAME_, hp_);
 	}
 }

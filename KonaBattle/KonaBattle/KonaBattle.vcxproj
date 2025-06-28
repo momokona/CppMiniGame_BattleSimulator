@@ -102,6 +102,8 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -123,13 +125,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="character\character_manager.cpp" />
     <ClCompile Include="character\chara_base.cpp" />
-    <ClCompile Include="game_mode\BattleLogManager.cpp" />
+    <ClCompile Include="game_mode\log_manager.cpp" />
     <ClCompile Include="KonaBattle.cpp" />
+    <ClCompile Include="ui\ui_manager.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="character\character_manager.h" />
     <ClInclude Include="character\chara_base.h" />
-    <ClInclude Include="game_mode\BattleLogManager.h" />
+    <ClInclude Include="defs.h" />
+    <ClInclude Include="game_mode\log_manager.h" />
+    <ClInclude Include="ui\ui_manager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

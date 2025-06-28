@@ -1,10 +1,2 @@
-﻿  chara_base.cpp
-C:\Users\momon\OneDrive\ドキュメント\GitHub\CppMiniGame_BattleSimulator\KonaBattle\KonaBattle\character\chara_base.cpp(29,9): warning C4477: 'printf' : 書式文字列 '%s' には、型 'char *' の引数が必要ですが、可変個引数 1 は型 'const std::string' です
-C:\Users\momon\OneDrive\ドキュメント\GitHub\CppMiniGame_BattleSimulator\KonaBattle\KonaBattle\character\chara_base.cpp(29,9): warning C4477: 'printf' : 書式文字列 '%s' には、型 'char *' の引数が必要ですが、可変個引数 2 は型 'const std::string' です
-C:\Users\momon\OneDrive\ドキュメント\GitHub\CppMiniGame_BattleSimulator\KonaBattle\KonaBattle\character\chara_base.cpp(82,9): warning C4477: 'printf' : 書式文字列 '%s' には、型 'char *' の引数が必要ですが、可変個引数 1 は型 'const std::string' です
-C:\Users\momon\OneDrive\ドキュメント\GitHub\CppMiniGame_BattleSimulator\KonaBattle\KonaBattle\character\chara_base.cpp(85,10): warning C4477: 'printf' : 書式文字列 '%s' には、型 'char *' の引数が必要ですが、可変個引数 1 は型 'const std::string' です
-C:\Users\momon\OneDrive\ドキュメント\GitHub\CppMiniGame_BattleSimulator\KonaBattle\KonaBattle\character\chara_base.cpp(85,37): warning C4474: 'printf': 書式文字列に渡された引数の数が多すぎます
-      C:\Users\momon\OneDrive\ドキュメント\GitHub\CppMiniGame_BattleSimulator\KonaBattle\KonaBattle\character\chara_base.cpp(85,37):
-      プレースホルダーとそのパラメーターには 1 の可変個引数が必要ですが、2 が指定されています。
-  
+﻿  KonaBattle.cpp
   KonaBattle.vcxproj -> C:\Users\momon\OneDrive\ドキュメント\GitHub\CppMiniGame_BattleSimulator\KonaBattle\x64\Debug\KonaBattle.exe

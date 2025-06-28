@@ -25,6 +25,12 @@
     <Filter Include="ソース ファイル\game_mode">
       <UniqueIdentifier>{0dd23c7b-a5f1-4667-9c89-39c604f5d811}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\ui">
+      <UniqueIdentifier>{2ae0e98f-bd97-4fa9-a543-07b263b9f5b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\ui">
+      <UniqueIdentifier>{63ba59f2-24c2-46f6-9b8a-d1bc0b6036fc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="KonaBattle.cpp">
@@ -33,16 +39,31 @@
     <ClCompile Include="character\chara_base.cpp">
       <Filter>ソース ファイル\character</Filter>
     </ClCompile>
-    <ClCompile Include="game_mode\BattleLogManager.cpp">
+    <ClCompile Include="game_mode\log_manager.cpp">
       <Filter>ソース ファイル\game_mode</Filter>
+    </ClCompile>
+    <ClCompile Include="character\character_manager.cpp">
+      <Filter>ソース ファイル\character</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\ui_manager.cpp">
+      <Filter>ソース ファイル\ui</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="character\chara_base.h">
       <Filter>ヘッダー ファイル\character</Filter>
     </ClInclude>
-    <ClInclude Include="game_mode\BattleLogManager.h">
+    <ClInclude Include="game_mode\log_manager.h">
       <Filter>ヘッダー ファイル\game_mode</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\ui_manager.h">
+      <Filter>ヘッダー ファイル\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="character\character_manager.h">
+      <Filter>ヘッダー ファイル\character</Filter>
+    </ClInclude>
+    <ClInclude Include="defs.h">
+      <Filter>ヘッダー ファイル\character</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
