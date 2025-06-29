@@ -2,10 +2,28 @@
 //
 
 #include <iostream>
+#include "ui/ui_manager.h"
+#include "character/character_manager.h"
+#include "game_mode/game_manager.h"
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    // Manager作成
+    GameManager::Create();
+    CharacterManager::Create();
+    UiManager::Create();
+
+    while (game_manager::GetGameState() != GameState::END)
+    {
+        game_manager::Update();
+    }
+    
+
+    // Manager破棄
+    UiManager::Destroy();
+    CharacterManager::Destroy();
+    GameManager::Destroy();
+
 
 }
 

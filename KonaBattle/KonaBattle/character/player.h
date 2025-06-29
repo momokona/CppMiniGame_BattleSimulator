@@ -3,8 +3,8 @@
 class Player :public CharaBase
 {
 public:
-	Player(const std::string NAME, const int MAX_HP, const int ATTACK, const int DEFENSE, const character::CharaType CHARA_TYPE = character::CharaType::ENEMY)
-		:CharaBase(NAME, MAX_HP, ATTACK, DEFENSE, CHARA_TYPE) {
+	Player(const std::string NAME, const int MAX_HP, const int ATTACK, const int DEFENSE)
+		:CharaBase(NAME, MAX_HP, ATTACK, DEFENSE, character::CharaType::PLAYER) {
 	}
 	~Player() {}
 	// プレイヤーの選択によって決まる
@@ -12,11 +12,12 @@ public:
 	{
 		behavior_ = behavior;
 	}
-private:
-	const BehaviorPattern GetBehavior() override
+	const BehaviorPattern GetNextBehavior() override
 	{
 		return behavior_;
 	}
 private:
-	BehaviorPattern behavior_{ BehaviorPattern::INVALID };
+	// 一つしかクラスを作りたくないためコピーコンストラクタは禁止
+	Player(const Player&)
+		:CharaBase(NAME_, 0, 0, 0, character::CharaType::PLAYER) {};
 };

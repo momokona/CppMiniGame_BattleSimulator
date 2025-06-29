@@ -29,12 +29,24 @@ void CharaBase::SufferAttack(const int OPPONENT_ATTACK, const std::string OPPONE
 	// ダメージの計算
 	const int DAMAGE = OPPONENT_ATTACK - defense_;
 	CalcHp(DAMAGE);
-	const auto ui_manager = UiManager::GetUiManager();
-	if (!ui_manager)
+	ui::DispBattleInfo(DAMAGE, OPPONENT_NAME, NAME_, hp_);
+}
+
+void CharaBase::TurnEndProcess()
+{
+	// 防御力を元に戻す
+	if (behavior_ == BehaviorPattern::DEFENSE)
 	{
-		return;
+		defense_ /= character::DEFENSE_MAGNIFICATION;
 	}
-	ui_manager->DispBattleInfo(DispInfo(OPPONENT_NAME, NAME_, DAMAGE, hp_));
+	// 状態異常・毒の処理
+	if (poison_state_num_ > 0)
+	{
+		if (--poison_state_num_ == 0)
+		{
+			states_.erase(character::State::POISON);
+		}
+	}
 }
 
 void CharaBase::SetState(character::State state)
@@ -61,6 +73,7 @@ void CharaBase::ReflectState()
 {
 	for (const auto state : states_)
 	{
+		int damage{};
 		// 死んでいたら終了
 		if (IsDead())
 		{
@@ -74,21 +87,20 @@ void CharaBase::ReflectState()
 		else if (state == character::State::POISON)
 		{
 			// 毒状態の時はダメージを受ける
-			CalcHp(POISON_DAMAGE);
+			damage = POISON_DAMAGE;
+			CalcHp(damage);
 		}
+		// 状態異常を反映した結果をUIに出す
+		ui::DispReflectState(character::State::POISON, NAME_, damage, hp_);
 	}
 }
-
-void CharaBase::Act(CharaBase& target)
+// 防御したとき以外の処理
+void CharaBase::Act(std::shared_ptr<CharaBase> target)
 {
-	const BehaviorPattern BEHAVIOR = GetBehavior();
+	const BehaviorPattern BEHAVIOR = GetNextBehavior();
 	if (BEHAVIOR == BehaviorPattern::ATTACK)
 	{
-		target.SufferAttack(attack_, NAME_);
-	}
-	else if (BEHAVIOR == BehaviorPattern::DEFENSE)
-	{
-		defense_ *= character::DEFENSE_MAGNIFICATION;
+		target->SufferAttack(attack_, NAME_);
 	}
 	else if(BEHAVIOR == BehaviorPattern::ITEM)
 	{
@@ -102,8 +114,8 @@ void CharaBase::Act(CharaBase& target)
 			// アサート処理にかけたい
 			return;
 		}
-		target.SufferAttack(POISON_DAMAGE, NAME_);
-		target.SetState(character::State::POISON);
+		target->SufferAttack(POISON_DAMAGE, NAME_);
+		target->SetState(character::State::POISON);
 	}
 }
 

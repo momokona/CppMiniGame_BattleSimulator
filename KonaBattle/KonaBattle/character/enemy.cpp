@@ -13,7 +13,7 @@ void Enemy::DecideAction()
 	}
 }
 
-const BehaviorPattern Enemy::GetBehavior()
+const BehaviorPattern Enemy::GetNextBehavior()
 {
 	if (action_queue_.empty())
 	{
@@ -23,5 +23,6 @@ const BehaviorPattern Enemy::GetBehavior()
 	// キューからアクションを取り出して削除
 	const enemy::Action action = action_queue_.top();
 	action_queue_.pop();
-	return action.behavior_;
+	behavior_ = action.behavior_;
+	return behavior_;
 }

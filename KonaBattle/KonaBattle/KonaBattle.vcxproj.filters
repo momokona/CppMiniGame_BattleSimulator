@@ -54,6 +54,9 @@
     <ClCompile Include="character\player.cpp">
       <Filter>ソース ファイル\character</Filter>
     </ClCompile>
+    <ClCompile Include="game_mode\game_manager.cpp">
+      <Filter>ソース ファイル\game_mode</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="character\chara_base.h">
@@ -76,6 +79,9 @@
     </ClInclude>
     <ClInclude Include="character\player.h">
       <Filter>ヘッダー ファイル\character</Filter>
+    </ClInclude>
+    <ClInclude Include="game_mode\game_manager.h">
+      <Filter>ヘッダー ファイル\game_mode</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

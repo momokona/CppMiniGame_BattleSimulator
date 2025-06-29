@@ -3,6 +3,7 @@
 #include <set>
 #include <vector>
 #include"../defs.h"
+#include <memory>
 
 namespace character
 {
@@ -38,13 +39,21 @@ public:
 	{
 		return hp_ <= 0;
 	}
-	void Act(CharaBase& target);
-protected:
-	void CalcHp(const int DAMAGE);
-	virtual const BehaviorPattern GetBehavior()
+	void Act(std::shared_ptr<CharaBase> target);
+
+	void TurnEndProcess();
+	virtual const BehaviorPattern GetNextBehavior()
 	{
 		return BehaviorPattern::INVALID;	// Œp³æ‚ÅÀ‘•
 	}
+
+	void DefenseProcess()
+	{
+		defense_ *= character::DEFENSE_MAGNIFICATION;
+	}
+protected:
+	void CalcHp(const int DAMAGE);
+
 protected:
 	std::set<character::State> states_{};	// ó‘Ô
 	const std::string NAME_{};	// –¼‘O
@@ -53,5 +62,9 @@ protected:
 	int hp_{};	// ‘Ì—Í
 	int attack_{};	// UŒ‚—Í
 	int defense_{};	// –hŒä—Í
+	int poison_state_num_{};	// “Åó‘Ô‚É‚È‚Á‚½ƒ^[ƒ“
+
+	BehaviorPattern behavior_{ BehaviorPattern::INVALID };
+
 
 };

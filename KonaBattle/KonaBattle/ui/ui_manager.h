@@ -1,26 +1,20 @@
 #pragma once
 #include <string>
+#include "../character/chara_base.h"
 struct DispInfo
 {
-	const std::string ATTACKER_NAME{};
-	const std::string DEFENSE_NAME{};
-	const int DAMAGE{};
-	const int HP{};
-	const bool IS_PLAYER_ATTACK{ false };
-	DispInfo(const std::string ATTACKER_NAME, const std::string DEFENSE_NAME,
-		const int DAMAGE, const int HP)
-		: ATTACKER_NAME(ATTACKER_NAME)
-		, DEFENSE_NAME(DEFENSE_NAME)
-		, DAMAGE(DAMAGE)
-		, HP(HP)
-	{}
+	std::string attacker_name{};
+	std::string defenser_name{};
+	int damage{};
+	int hp{};
+	character::State state{ character::State::NORMAL };
 };
 
 class UiManager
 {
 public:
 	static void Create();
-	static void Delete()
+	static void Destroy()
 	{
 		delete ui_manager_;
 	}
@@ -29,10 +23,26 @@ public:
 		return ui_manager_;
 	}
 	void DispBattleInfo(const DispInfo& disp_info) const;
+	void DispReflectState(const DispInfo& disp_info) const;
 	void ShowActionOptions() const;
+	void DispEndGame() const;
+	void DispTitle() const;
 private:
 	UiManager() {}
 	UiManager(const UiManager&) {}
 private:
 	static UiManager* ui_manager_;
 };
+
+// 外部関数
+namespace ui
+{
+// バトルの結果を出す
+void DispBattleInfo(const int DAMAGE, const std::string ATTACKER_NAME, const std::string DEFENSER_NAME, const int DEFENSER_HP);
+// 状態異常を反映させたときの結果を出す
+void DispReflectState(const character::State STATE, const std::string NAME, const int DAMAGE, const int HP);
+// ゲーム終了時に出すメッセージ
+void DispEndGame();
+void DispTitle();
+}	// namespace ui
+

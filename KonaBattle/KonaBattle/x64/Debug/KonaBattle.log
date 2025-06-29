@@ -1,150 +1,244 @@
 ﻿  character_manager.cpp
   chara_base.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xutility(476,61): error C2665: 'Player::Player': オーバーロードされた関数ですべての引数の型を変換できませんでした
+  (ソース ファイル 'character/character_manager.cpp' をコンパイルしています)
+      C:\Users\momona\Documents\GitHub\CppMiniGame_BattleSimulator\KonaBattle\KonaBattle\character\player.h(6,2):
+      'Player::Player(const std::string,const int,const int,const int)' の可能性があります
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xutility(476,61):
+          'Player::Player(const std::string,const int,const int,const int)': 引数 1 を 'const std::string_view' から 'const std::string' へ変換できません。
+              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xutility(476,82):
+              この変換を実行可能なユーザー定義変換演算子がないか、または演算子を呼び出せません。
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xutility(476,61):
+      引数リスト '(const std::string_view, const int, const int, const int)' を一致させようとしているとき
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xutility(476,61):
+      テンプレートインスタンス化コンテキスト (最初に最も古いもの) は
+          C:\Users\momona\Documents\GitHub\CppMiniGame_BattleSimulator\KonaBattle\KonaBattle\character\character_manager.cpp(10,20):
+          コンパイル対象の関数 テンプレート インスタンス化 'std::shared_ptr<Player> std::make_shared<Player,const std::string_view&,const int&,const int&,const int&>(const std::string_view &,const int &,const int &,const int &)' のリファレンスを確認してください
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(2913,46):
+          コンパイル対象の関数 テンプレート インスタンス化 'std::_Ref_count_obj2<Player>::_Ref_count_obj2<const std::string_view&,const int&,const int&,const int&>(const std::string_view &,const int &,const int &,const int &)' のリファレンスを確認してください
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(2100,18):
+          コンパイル対象の関数 テンプレート インスタンス化 'void std::_Construct_in_place<_Ty,const std::string_view&,const int&,const int&,const int&>(_Ty &,const std::string_view &,const int &,const int &,const int &) noexcept(false)' のリファレンスを確認してください
+          with
+          [
+              _Ty=Player
+          ]
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xutility(476,61): error C2665: 'Enemy::Enemy': オーバーロードされた関数ですべての引数の型を変換できませんでした
+  (ソース ファイル 'character/character_manager.cpp' をコンパイルしています)
+      C:\Users\momona\Documents\GitHub\CppMiniGame_BattleSimulator\KonaBattle\KonaBattle\character\enemy.h(20,2):
+      'Enemy::Enemy(const std::string,const int,const int,const int)' の可能性があります
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xutility(476,61):
+          'Enemy::Enemy(const std::string,const int,const int,const int)': 引数 1 を 'const std::string_view' から 'const std::string' へ変換できません。
+              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xutility(476,82):
+              この変換を実行可能なユーザー定義変換演算子がないか、または演算子を呼び出せません。
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xutility(476,61):
+      引数リスト '(const std::string_view, const int, const int, const int)' を一致させようとしているとき
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xutility(476,61):
+      テンプレートインスタンス化コンテキスト (最初に最も古いもの) は
+          C:\Users\momona\Documents\GitHub\CppMiniGame_BattleSimulator\KonaBattle\KonaBattle\character\character_manager.cpp(13,29):
+          コンパイル対象の関数 テンプレート インスタンス化 'std::shared_ptr<Enemy> std::make_shared<Enemy,const std::string_view&,const int&,const int&,const int&>(const std::string_view &,const int &,const int &,const int &)' のリファレンスを確認してください
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(2913,46):
+          コンパイル対象の関数 テンプレート インスタンス化 'std::_Ref_count_obj2<Enemy>::_Ref_count_obj2<const std::string_view&,const int&,const int&,const int&>(const std::string_view &,const int &,const int &,const int &)' のリファレンスを確認してください
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(2100,18):
+          コンパイル対象の関数 テンプレート インスタンス化 'void std::_Construct_in_place<_Ty,const std::string_view&,const int&,const int&,const int&>(_Ty &,const std::string_view &,const int &,const int &,const int &) noexcept(false)' のリファレンスを確認してください
+          with
+          [
+              _Ty=Enemy
+          ]
+  
   enemy.cpp
   player.cpp
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\type_traits(2410,54): error C2678: 二項演算子 '<': 型 'const _Ty' の左オペランドを扱う演算子が見つかりません (または変換できません) (新しい動作; ヘルプを参照)。
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\type_traits(2410,54): error C2678:         with
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\type_traits(2410,54): error C2678:         [
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\type_traits(2410,54): error C2678:             _Ty=enemy::Action
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\type_traits(2410,54): error C2678:         ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\type_traits(2379,54): error C2678: 二項演算子 '<': 型 'const _Ty' の左オペランドを扱う演算子が見つかりません (または変換できません) (新しい動作; ヘルプを参照)。
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\type_traits(2379,54): error C2678:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\type_traits(2379,54): error C2678:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\type_traits(2379,54): error C2678:             _Ty=enemy::Action
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\type_traits(2379,54): error C2678:         ]
   (ソース ファイル 'character/enemy.cpp' をコンパイルしています)
       C:\Users\momona\Documents\GitHub\CppMiniGame_BattleSimulator\KonaBattle\KonaBattle\character\enemy.h(11,7):
       'bool enemy::Action::operator <(const enemy::Action &)' の可能性があります
-          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\type_traits(2410,54):
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\type_traits(2379,54):
           'bool enemy::Action::operator <(const enemy::Action &)': 'const _Ty' から 'enemy::Action &' へ 'this' ポインターを変換できません。
           with
           [
               _Ty=enemy::Action
           ]
-              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\type_traits(2410,54):
+              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\type_traits(2379,54):
               変換で修飾子が失われます。
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\queue(192,17):
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\queue(192,17):
       または 'bool std::operator <(const std::queue<_Ty,_Container> &,const std::queue<_Ty,_Container> &)'
-          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\type_traits(2410,54):
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\type_traits(2379,54):
           'bool std::operator <(const std::queue<_Ty,_Container> &,const std::queue<_Ty,_Container> &)': 'const std::queue<_Ty,_Container> &' の テンプレート 引数を 'const _Ty' から推測できませんでした
           with
           [
               _Ty=enemy::Action
           ]
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\deque(1808,17):
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\deque(1811,17):
       または 'bool std::operator <(const std::deque<_Ty,_Alloc> &,const std::deque<_Ty,_Alloc> &)'
-          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\type_traits(2410,54):
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\type_traits(2379,54):
           'bool std::operator <(const std::deque<_Ty,_Alloc> &,const std::deque<_Ty,_Alloc> &)': 'const std::deque<_Ty,_Alloc> &' の テンプレート 引数を 'const _Ty' から推測できませんでした
           with
           [
               _Ty=enemy::Action
           ]
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\vector(2313,30):
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3740,30):
+      または 'bool std::operator <(std::nullptr_t,const std::unique_ptr<_Ty,_Dx> &)'
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\type_traits(2379,54):
+          'bool std::operator <(std::nullptr_t,const std::unique_ptr<_Ty,_Dx> &)': 'const std::unique_ptr<_Ty,_Dx> &' の テンプレート 引数を 'const _Ty' から推測できませんでした
+          with
+          [
+              _Ty=enemy::Action
+          ]
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3734,30):
+      または 'bool std::operator <(const std::unique_ptr<_Ty,_Dx> &,std::nullptr_t)'
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\type_traits(2379,54):
+          'bool std::operator <(const std::unique_ptr<_Ty,_Dx> &,std::nullptr_t)': 'const std::unique_ptr<_Ty,_Dx> &' の テンプレート 引数を 'const _Ty' から推測できませんでした
+          with
+          [
+              _Ty=enemy::Action
+          ]
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3678,17):
+      または 'bool std::operator <(const std::unique_ptr<_Ty,_Dx> &,const std::unique_ptr<_Ty2,_Dx2> &)'
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\type_traits(2379,54):
+          'bool std::operator <(const std::unique_ptr<_Ty,_Dx> &,const std::unique_ptr<_Ty2,_Dx2> &)': 'const std::unique_ptr<_Ty,_Dx> &' の テンプレート 引数を 'const _Ty' から推測できませんでした
+          with
+          [
+              _Ty=enemy::Action
+          ]
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(1948,17):
+      または 'bool std::operator <(std::nullptr_t,const std::shared_ptr<_Ty> &) noexcept'
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\type_traits(2379,54):
+          'bool std::operator <(std::nullptr_t,const std::shared_ptr<_Ty> &) noexcept': 'const std::shared_ptr<_Ty> &' の テンプレート 引数を 'const _Ty' から推測できませんでした
+          with
+          [
+              _Ty=enemy::Action
+          ]
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(1943,17):
+      または 'bool std::operator <(const std::shared_ptr<_Ty> &,std::nullptr_t) noexcept'
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\type_traits(2379,54):
+          'bool std::operator <(const std::shared_ptr<_Ty> &,std::nullptr_t) noexcept': 'const std::shared_ptr<_Ty> &' の テンプレート 引数を 'const _Ty' から推測できませんでした
+          with
+          [
+              _Ty=enemy::Action
+          ]
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(1896,17):
+      または 'bool std::operator <(const std::shared_ptr<_Ty> &,const std::shared_ptr<_Ty0> &) noexcept'
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\type_traits(2379,54):
+          'bool std::operator <(const std::shared_ptr<_Ty> &,const std::shared_ptr<_Ty0> &) noexcept': 'const std::shared_ptr<_Ty> &' の テンプレート 引数を 'const _Ty' から推測できませんでした
+          with
+          [
+              _Ty=enemy::Action
+          ]
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\vector(2356,30):
       または 'bool std::operator <(const std::vector<_Ty,_Alloc> &,const std::vector<_Ty,_Alloc> &)'
-          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\type_traits(2410,54):
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\type_traits(2379,54):
           'bool std::operator <(const std::vector<_Ty,_Alloc> &,const std::vector<_Ty,_Alloc> &)': 'const std::vector<_Ty,_Alloc> &' の テンプレート 引数を 'const _Ty' から推測できませんでした
           with
           [
               _Ty=enemy::Action
           ]
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\set(443,17):
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\set(443,17):
       または 'bool std::operator <(const std::multiset<_Kty,_Pr,_Alloc> &,const std::multiset<_Kty,_Pr,_Alloc> &)'
-          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\type_traits(2410,54):
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\type_traits(2379,54):
           'bool std::operator <(const std::multiset<_Kty,_Pr,_Alloc> &,const std::multiset<_Kty,_Pr,_Alloc> &)': 'const std::multiset<_Kty,_Pr,_Alloc> &' の テンプレート 引数を 'const _Ty' から推測できませんでした
           with
           [
               _Ty=enemy::Action
           ]
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\set(228,17):
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\set(228,17):
       または 'bool std::operator <(const std::set<_Kty,_Pr,_Alloc> &,const std::set<_Kty,_Pr,_Alloc> &)'
-          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\type_traits(2410,54):
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\type_traits(2379,54):
           'bool std::operator <(const std::set<_Kty,_Pr,_Alloc> &,const std::set<_Kty,_Pr,_Alloc> &)': 'const std::set<_Kty,_Pr,_Alloc> &' の テンプレート 引数を 'const _Ty' から推測できませんでした
           with
           [
               _Ty=enemy::Action
           ]
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\xstring(3293,17):
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xstring(3318,17):
       または 'bool std::operator <(const std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem *const ) noexcept'
-          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\type_traits(2410,54):
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\type_traits(2379,54):
           'bool std::operator <(const std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem *const ) noexcept': 'const std::basic_string<_Elem,_Traits,_Alloc> &' の テンプレート 引数を 'const _Ty' から推測できませんでした
           with
           [
               _Ty=enemy::Action
           ]
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\xstring(3287,17):
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xstring(3312,17):
       または 'bool std::operator <(const _Elem *const ,const std::basic_string<_Elem,_Traits,_Alloc> &) noexcept'
-          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\type_traits(2410,54):
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\type_traits(2379,54):
           'bool std::operator <(const _Elem *const ,const std::basic_string<_Elem,_Traits,_Alloc> &) noexcept': 'const _Elem *const ' の テンプレート 引数を 'const _Ty' から推測できませんでした
           with
           [
               _Ty=enemy::Action
           ]
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\xstring(3281,17):
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xstring(3306,17):
       または 'bool std::operator <(const std::basic_string<_Elem,_Traits,_Alloc> &,const std::basic_string<_Elem,_Traits,_Alloc> &) noexcept'
-          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\type_traits(2410,54):
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\type_traits(2379,54):
           'bool std::operator <(const std::basic_string<_Elem,_Traits,_Alloc> &,const std::basic_string<_Elem,_Traits,_Alloc> &) noexcept': 'const std::basic_string<_Elem,_Traits,_Alloc> &' の テンプレート 引数を 'const _Ty' から推測できませんでした
           with
           [
               _Ty=enemy::Action
           ]
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\tuple(869,27):
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\tuple(863,27):
       または 'bool std::operator <(const std::tuple<_Types...> &,const std::tuple<_Types...> &)'
-          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\type_traits(2410,54):
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\type_traits(2379,54):
           'bool std::operator <(const std::tuple<_Types...> &,const std::tuple<_Types...> &)': 'const std::tuple<_Types...> &' の テンプレート 引数を 'const _Ty' から推測できませんでした
           with
           [
               _Ty=enemy::Action
           ]
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\__msvc_string_view.hpp(1717,27):
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\__msvc_string_view.hpp(1900,27):
       または 'bool std::operator <(const std::basic_string_view<_Elem,_Traits>,const _Identity<std::basic_string_view<_Elem,_Traits>>::type) noexcept'
-          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\type_traits(2410,54):
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\type_traits(2379,54):
           'bool std::operator <(const std::basic_string_view<_Elem,_Traits>,const _Identity<std::basic_string_view<_Elem,_Traits>>::type) noexcept': 'const std::basic_string_view<_Elem,_Traits>' の テンプレート 引数を 'const _Ty' から推測できませんでした
           with
           [
               _Ty=enemy::Action
           ]
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\__msvc_string_view.hpp(1711,27):
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\__msvc_string_view.hpp(1894,27):
       または 'bool std::operator <(const _Identity<std::basic_string_view<_Elem,_Traits>>::type,const std::basic_string_view<_Elem,_Traits>) noexcept'
-          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\type_traits(2410,54):
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\type_traits(2379,54):
           'bool std::operator <(const _Identity<std::basic_string_view<_Elem,_Traits>>::type,const std::basic_string_view<_Elem,_Traits>) noexcept': 'const std::basic_string_view<_Elem,_Traits>' の テンプレート 引数を 'const _Ty' から推測できませんでした
           with
           [
               _Ty=enemy::Action
           ]
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\__msvc_string_view.hpp(1705,27):
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\__msvc_string_view.hpp(1888,27):
       または 'bool std::operator <(const std::basic_string_view<_Elem,_Traits>,const std::basic_string_view<_Elem,_Traits>) noexcept'
-          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\type_traits(2410,54):
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\type_traits(2379,54):
           'bool std::operator <(const std::basic_string_view<_Elem,_Traits>,const std::basic_string_view<_Elem,_Traits>) noexcept': 'const std::basic_string_view<_Elem,_Traits>' の テンプレート 引数を 'const _Ty' から推測できませんでした
           with
           [
               _Ty=enemy::Action
           ]
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\xutility(4416,5):
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xutility(4478,30):
       または 'bool std::operator <(const std::move_iterator<_Iter> &,const std::move_iterator<_Iter2> &) noexcept(<expr>)'
-          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\type_traits(2410,54):
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\type_traits(2379,54):
           'bool std::operator <(const std::move_iterator<_Iter> &,const std::move_iterator<_Iter2> &) noexcept(<expr>)': 'const std::move_iterator<_Iter> &' の テンプレート 引数を 'const _Ty' から推測できませんでした
           with
           [
               _Ty=enemy::Action
           ]
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\xutility(1872,5):
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xutility(1920,30):
       または 'bool std::operator <(const std::reverse_iterator<_BidIt> &,const std::reverse_iterator<_BidIt2> &) noexcept(<expr>)'
-          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\type_traits(2410,54):
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\type_traits(2379,54):
           'bool std::operator <(const std::reverse_iterator<_BidIt> &,const std::reverse_iterator<_BidIt2> &) noexcept(<expr>)': 'const std::reverse_iterator<_BidIt> &' の テンプレート 引数を 'const _Ty' から推測できませんでした
           with
           [
               _Ty=enemy::Action
           ]
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\utility(515,27):
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\utility(524,27):
       または 'bool std::operator <(const std::pair<_Ty1,_Ty2> &,const std::pair<_Uty1,_Uty2> &)'
-          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\type_traits(2410,54):
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\type_traits(2379,54):
           'bool std::operator <(const std::pair<_Ty1,_Ty2> &,const std::pair<_Uty1,_Uty2> &)': 'const std::pair<_Ty1,_Ty2> &' の テンプレート 引数を 'const _Ty' から推測できませんでした
           with
           [
               _Ty=enemy::Action
           ]
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\type_traits(2410,54):
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\type_traits(2379,54):
       引数リスト '(const _Ty, const _Ty)' を一致させようとしているとき
           with
           [
               _Ty=enemy::Action
           ]
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\type_traits(2410,54):
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\type_traits(2379,54):
       テンプレートインスタンス化コンテキスト (最初に最も古いもの) は
           C:\Users\momona\Documents\GitHub\CppMiniGame_BattleSimulator\KonaBattle\KonaBattle\character\enemy.h(29,37):
           コンパイル対象の クラス テンプレート インスタンス化 'std::priority_queue<enemy::Action,std::vector<enemy::Action,std::allocator<enemy::Action>>,std::less<_Ty>>' のリファレンスを確認してください
@@ -152,7 +246,7 @@ C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.3443
           [
               _Ty=enemy::Action
           ]
-          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\queue(387,10):
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\queue(387,10):
           クラス テンプレート メンバー関数 'void std::priority_queue<enemy::Action,std::vector<enemy::Action,std::allocator<enemy::Action>>,std::less<_Ty>>::push(enemy::Action &&)' のコンパイル中
           with
           [
@@ -164,7 +258,7 @@ C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.3443
           [
               _Ty=enemy::Action
           ]
-          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\queue(389,14):
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\queue(389,14):
           コンパイル対象の関数 テンプレート インスタンス化 'void std::push_heap<std::_Vector_iterator<std::_Vector_val<std::_Simple_types<_Ty>>>,_Fn>(_RanIt,_RanIt,_Pr)' のリファレンスを確認してください
           with
           [
@@ -173,7 +267,7 @@ C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.3443
               _RanIt=std::_Vector_iterator<std::_Vector_val<std::_Simple_types<enemy::Action>>>,
               _Pr=std::less<enemy::Action>
           ]
-          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\__msvc_heap_algorithms.hpp(46,14):
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\__msvc_heap_algorithms.hpp(46,14):
           コンパイル対象の関数 テンプレート インスタンス化 'void std::_Push_heap_by_index<enemy::Action*,enemy::Action,_Fn>(_RanIt,__int64,__int64,_Ty &&,_Pr)' のリファレンスを確認してください
           with
           [
@@ -182,7 +276,7 @@ C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.3443
               _Ty=enemy::Action,
               _Pr=std::less<enemy::Action>
           ]
-          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\__msvc_heap_algorithms.hpp(27,26):
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\__msvc_heap_algorithms.hpp(27,25):
           コンパイル対象の関数 テンプレート インスタンス化 'bool std::_Debug_lt_pred<_Pr&,enemy::Action&,_Ty&>(std::less<_Ty>&,_Ty1,_Ty2) noexcept(<expr>)' のリファレンスを確認してください
           with
           [
@@ -192,12 +286,21 @@ C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.3443
               _Ty2=enemy::Action &
           ]
   
+  game_manager.cpp
+C:\Users\momona\Documents\GitHub\CppMiniGame_BattleSimulator\KonaBattle\KonaBattle\game_mode\game_manager.cpp(34,10): warning C4553: '==': 式の結果が使用されていません。'=' を意図していますか?
+C:\Users\momona\Documents\GitHub\CppMiniGame_BattleSimulator\KonaBattle\KonaBattle\game_mode\game_manager.cpp(60,3): error C2561: 'game_manager::GetGameState': 関数が値を戻すように宣言されていますが、関数定義に 'return' ステートメントがありません。
+      C:\Users\momona\Documents\GitHub\CppMiniGame_BattleSimulator\KonaBattle\KonaBattle\game_mode\game_manager.cpp(53,17):
+      'game_manager::GetGameState' の宣言を確認してください
+  
   log_manager.cpp
   KonaBattle.cpp
   ui_manager.cpp
-C:\Users\momona\Documents\GitHub\CppMiniGame_BattleSimulator\KonaBattle\KonaBattle\ui\ui_manager.cpp(17,9): warning C4477: 'printf' : 書式文字列 '%s' には、型 'char *' の引数が必要ですが、可変個引数 1 は型 'const std::string' です
-C:\Users\momona\Documents\GitHub\CppMiniGame_BattleSimulator\KonaBattle\KonaBattle\ui\ui_manager.cpp(17,9): warning C4477: 'printf' : 書式文字列 '%s' には、型 'char *' の引数が必要ですが、可変個引数 2 は型 'const std::string' です
-C:\Users\momona\Documents\GitHub\CppMiniGame_BattleSimulator\KonaBattle\KonaBattle\ui\ui_manager.cpp(18,9): warning C4477: 'printf' : 書式文字列 '%s' には、型 'char *' の引数が必要ですが、可変個引数 1 は型 'const std::string' です
-C:\Users\momona\Documents\GitHub\CppMiniGame_BattleSimulator\KonaBattle\KonaBattle\ui\ui_manager.cpp(21,10): warning C4477: 'printf' : 書式文字列 '%s' には、型 'char *' の引数が必要ですが、可変個引数 1 は型 'const std::string' です
-C:\Users\momona\Documents\GitHub\CppMiniGame_BattleSimulator\KonaBattle\KonaBattle\ui\ui_manager.cpp(27,9): warning C4477: 'printf' : 書式文字列 '%s' には、型 'char *' の引数が必要ですが、可変個引数 1 は型 'const std::string_view' です
+C:\Users\momona\Documents\GitHub\CppMiniGame_BattleSimulator\KonaBattle\KonaBattle\ui\ui_manager.cpp(19,9): warning C4477: 'printf' : 書式文字列 '%s' には、型 'char *' の引数が必要ですが、可変個引数 1 は型 'const std::string' です
+C:\Users\momona\Documents\GitHub\CppMiniGame_BattleSimulator\KonaBattle\KonaBattle\ui\ui_manager.cpp(20,9): warning C4477: 'printf' : 書式文字列 '%s' には、型 'char *' の引数が必要ですが、可変個引数 1 は型 'const std::string' です
+C:\Users\momona\Documents\GitHub\CppMiniGame_BattleSimulator\KonaBattle\KonaBattle\ui\ui_manager.cpp(21,9): warning C4477: 'printf' : 書式文字列 '%s' には、型 'char *' の引数が必要ですが、可変個引数 1 は型 'const std::string' です
+C:\Users\momona\Documents\GitHub\CppMiniGame_BattleSimulator\KonaBattle\KonaBattle\ui\ui_manager.cpp(24,10): warning C4477: 'printf' : 書式文字列 '%s' には、型 'char *' の引数が必要ですが、可変個引数 1 は型 'const std::string' です
+C:\Users\momona\Documents\GitHub\CppMiniGame_BattleSimulator\KonaBattle\KonaBattle\ui\ui_manager.cpp(35,10): warning C4477: 'printf' : 書式文字列 '%s' には、型 'char *' の引数が必要ですが、可変個引数 1 は型 'const std::string' です
+C:\Users\momona\Documents\GitHub\CppMiniGame_BattleSimulator\KonaBattle\KonaBattle\ui\ui_manager.cpp(40,9): warning C4477: 'printf' : 書式文字列 '%s' には、型 'char *' の引数が必要ですが、可変個引数 1 は型 'const std::string' です
+C:\Users\momona\Documents\GitHub\CppMiniGame_BattleSimulator\KonaBattle\KonaBattle\ui\ui_manager.cpp(43,10): warning C4477: 'printf' : 書式文字列 '%s' には、型 'char *' の引数が必要ですが、可変個引数 1 は型 'const std::string' です
+C:\Users\momona\Documents\GitHub\CppMiniGame_BattleSimulator\KonaBattle\KonaBattle\ui\ui_manager.cpp(49,9): warning C4477: 'printf' : 書式文字列 '%s' には、型 'char *' の引数が必要ですが、可変個引数 1 は型 'const std::string_view' です
   コードを生成中...
