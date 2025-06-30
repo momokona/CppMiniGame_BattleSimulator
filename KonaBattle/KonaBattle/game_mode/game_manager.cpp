@@ -3,6 +3,7 @@
 #include<iostream>
 #include "../ui/ui_manager.h"
 #include "../character/character_manager.h"
+#include "log_manager.h"
 GameManager* GameManager::game_manager_ = nullptr;
 void GameManager::Create()
 {
@@ -32,6 +33,7 @@ void GameManager::Update()
 			break;
 	case GameState::JUST_END:
 		ui::DispEndGame();
+		action_log::ShowLog();
 		state_ = GameState::END;
 		break;
 

@@ -5,12 +5,14 @@
 #include "ui/ui_manager.h"
 #include "character/character_manager.h"
 #include "game_mode/game_manager.h"
+#include "game_mode/log_manager.h"
 
 int main()
 {
     // Manager作成
     GameManager::Create();
     CharacterManager::Create();
+    LogManager::Create();
     UiManager::Create();
 
     while (game_manager::GetGameState() != GameState::END)
@@ -21,6 +23,7 @@ int main()
 
     // Manager破棄
     UiManager::Destroy();
+    LogManager::Destroy();
     CharacterManager::Destroy();
     GameManager::Destroy();
 

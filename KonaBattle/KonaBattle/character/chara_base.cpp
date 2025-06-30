@@ -1,6 +1,7 @@
 #include"chara_base.h"
 #include "../ui/ui_manager.h"
 #include <cassert>
+#include "../game_mode/log_manager.h"
 
 constexpr int POISON_DAMAGE = 10;
 constexpr int POISON_NUM = 3;
@@ -121,10 +122,10 @@ void CharaBase::Act(std::shared_ptr<CharaBase> target)
 		return;
 	}
 	const BehaviorPattern BEHAVIOR = GetNextBehavior();
-	ActionLog log{NAME_, target->GetName(), BEHAVIOR};
+	ActionLog log{ NAME_, target->GetName(), BEHAVIOR };
 	if (BEHAVIOR == BehaviorPattern::DEFENSE)
 	{
-		log::AddLog(log);
+		action_log::AddLog(log);
 		return;
 	}
 
@@ -136,7 +137,10 @@ void CharaBase::Act(std::shared_ptr<CharaBase> target)
 	}
 	else if(BEHAVIOR == BehaviorPattern::ITEM)
 	{
-		// アイテムを使った時の処理を書く
+		// アイテムを使った時の処理を書く.アイテムは未実装なので毒にしている。
+		log.added_state.push_back(character::State::POISON);
+		target->SetState(character::State::POISON);
+
 	}
 	else if (BEHAVIOR == BehaviorPattern::POISON)
 	{
@@ -150,7 +154,7 @@ void CharaBase::Act(std::shared_ptr<CharaBase> target)
 		log.added_state.push_back(character::State::POISON);
 		target->SetState(character::State::POISON);
 	}
-	log::AddLog(log);
+	action_log::AddLog(log);
 }
 
 void CharaBase::CalcHp(const int DAMAGE)

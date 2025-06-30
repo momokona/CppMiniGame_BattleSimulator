@@ -4,7 +4,9 @@
 #include <vector>
 #include"../defs.h"
 #include <memory>
-#include "../game_mode/log_manager.h"
+
+// ‘O•ûQÆ
+struct ActionLog;
 
 namespace character
 {
@@ -50,7 +52,7 @@ public:
 
 	void DefenseProcess();
 
-	const std::string GetName() const
+	const std::string& GetName() const
 	{
 		return NAME_;
 	}

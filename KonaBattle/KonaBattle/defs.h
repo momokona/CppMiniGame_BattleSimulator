@@ -1,6 +1,6 @@
+#pragma once
 #include <string>
 #include <string_view>
-#pragma once
 constexpr std::string_view PLAYER_NAME = "ÉRÉi";
 constexpr int PLAYER_MAX_HP = 100;
 constexpr int PLAYER_INIT_ATTACK = 12;

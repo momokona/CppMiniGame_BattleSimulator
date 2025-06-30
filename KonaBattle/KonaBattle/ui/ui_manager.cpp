@@ -50,7 +50,7 @@ void UiManager::DispReflectState(const DispInfo& disp_info) const
 
 void UiManager::ShowActionOptions() const
 {
-	printf("\n");
+	printf("\n\n");
 	printf("%sのターン！どうする？\n", std::string(PLAYER_NAME).c_str());
 	printf("1. 攻撃  2.  防御  3. アイテム\n");
 	while (1)
@@ -77,6 +77,7 @@ void UiManager::ShowActionOptions() const
 			break;
 		}
 	}
+	system("cls");
 }
 
 void UiManager::DispBehavior(const BehaviorPattern BEHEVIOR, const std::string ATTACKER_NAME)
@@ -89,7 +90,7 @@ void UiManager::DispBehavior(const BehaviorPattern BEHEVIOR, const std::string A
 		break;
 	case BehaviorPattern::ITEM:
 		printf("%sはアイテムを使った！！\n", ATTACKER_NAME.c_str());
-		printf("アイテムは未実装です\n");
+		printf("アイテムは未実装なので毒状態にします。\n");
 		break;
 	case BehaviorPattern::DEFENSE:
 		printf("%sは身を守った！！\n", ATTACKER_NAME.c_str());
@@ -143,7 +144,7 @@ void UiManager::DispNewState(const character::State STATE, const std::string NAM
 // 外部関数
 namespace ui
 {
-void ui::DispBattleInfo(const int DAMAGE, const std::string ATTACKER_NAME, const std::string DEFENSER_NAME, const int DEFENSER_HP)
+void DispBattleInfo(const int DAMAGE, const std::string ATTACKER_NAME, const std::string DEFENSER_NAME, const int DEFENSER_HP)
 {
 	const auto ui_manager = UiManager::GetUiManager();
 	if (!ui_manager)
@@ -160,7 +161,7 @@ void ui::DispBattleInfo(const int DAMAGE, const std::string ATTACKER_NAME, const
 	ui_manager->DispBattleInfo(disp_info);
 }
 
-void ui::ShowActionOptions()
+void ShowActionOptions()
 {
 	const auto ui_manager = UiManager::GetUiManager();
 	if (!ui_manager)
@@ -172,7 +173,7 @@ void ui::ShowActionOptions()
 	ui_manager->ShowActionOptions();
 }
 
-void ui::DispBehavior(const BehaviorPattern BEHEVIOR, const std::string ATTACKER_NAME)
+void DispBehavior(const BehaviorPattern BEHEVIOR, const std::string ATTACKER_NAME)
 {
 	const auto ui_manager = UiManager::GetUiManager();
 	if (!ui_manager)

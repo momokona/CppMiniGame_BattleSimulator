@@ -1,13 +1,7 @@
 #pragma once
+#include "../character/chara_base.h"
 #include <string>
 #include <vector>
-#include "../character/chara_base.h"
-namespace game_mode
-{
-	
-
-}	// namespace game_mode
-
 
 struct ActionLog
 {
@@ -16,15 +10,20 @@ struct ActionLog
     const BehaviorPattern BEHAVIOR{}; // 行動の種類（攻撃、防御など）
     int damage{};                 // 与えたダメージ（攻撃の場合）
     std::vector<character::State> added_state{}; // 状態異常（毒など）
-    ActionLog(const std::string ATTACKER_NAME, const std::string TARGET_NAME, const BehaviorPattern BEHAVIOR)
-        :ATTACKER_NAME(ATTACKER_NAME)
-        , TARGET_NAME(TARGET_NAME)
+    ActionLog(std::string attacker_name, std::string target_name, const BehaviorPattern BEHAVIOR)
+        :ATTACKER_NAME(std::move(attacker_name))
+        , TARGET_NAME(std::move(target_name))
         , BEHAVIOR(BEHAVIOR) {}
 };
 
 class LogManager
 {
 public:
+    static void Create();
+    static void Destroy()
+    {
+        delete log_manager_;
+    }
     void AddLog(const ActionLog& LOG)
     {
         behavior_log_.push_back(LOG);
@@ -39,14 +38,15 @@ private:
     LogManager() {};
     LogManager(const LogManager& obj) {};
     // 行動を文字に直す
-    std::string BehaviorToString(BehaviorPattern pattern);
+    const std::string& BehaviorToString(const BehaviorPattern PATTERN) const;
+    const std::string& StateToString(const character::State STATE) const;
 private:
     std::vector<ActionLog> behavior_log_{};	// 行動履歴
-    static LogManager* log_manager_{};
+    static LogManager* log_manager_;
 };
 
-namespace log
+namespace action_log
 {
 void AddLog(const ActionLog& LOG);
-
-}
+void ShowLog();
+}   // namespace action_log
