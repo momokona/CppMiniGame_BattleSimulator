@@ -75,7 +75,7 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 470,
+          "DockedWidth": 425,
           "SelectedChildIndex": 0,
           "Children": [
             {
@@ -101,8 +101,7 @@
               "RelativeToolTip": "KonaBattle\\character\\chara_base.h",
               "ViewState": "AgIAABMAAAAAAAAAAAAowCMAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-06-28T01:40:33.42Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-28T01:40:33.42Z"
             },
             {
               "$type": "Document",
@@ -114,8 +113,7 @@
               "RelativeToolTip": "KonaBattle\\game_mode\\game_manager.cpp",
               "ViewState": "AgIAAAUAAAAAAAAAAAApwB4AAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-06-29T08:10:00.641Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-29T08:10:00.641Z"
             },
             {
               "$type": "Document",
@@ -127,8 +125,7 @@
               "RelativeToolTip": "KonaBattle\\character\\character_manager.cpp",
               "ViewState": "AgIAAEMAAAAAAAAAAAAowFsAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-06-28T01:58:14.276Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-28T01:58:14.276Z"
             },
             {
               "$type": "Bookmark",
@@ -144,8 +141,7 @@
               "RelativeToolTip": "KonaBattle\\character\\enemy.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-06-28T05:17:20.669Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-28T05:17:20.669Z"
             },
             {
               "$type": "Document",
@@ -157,8 +153,7 @@
               "RelativeToolTip": "KonaBattle\\character\\enemy.h",
               "ViewState": "AgIAAAgAAAAAAAAAAAAQwBgAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-06-28T05:16:13.769Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-28T05:16:13.769Z"
             },
             {
               "$type": "Document",
@@ -170,8 +165,7 @@
               "RelativeToolTip": "KonaBattle\\ui\\ui_manager.h",
               "ViewState": "AgIAACQAAAAAAAAAAAApwCoAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-06-28T01:48:56.618Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-28T01:48:56.618Z"
             },
             {
               "$type": "Document",
@@ -183,8 +177,7 @@
               "RelativeToolTip": "KonaBattle\\character\\character_manager.h",
               "ViewState": "AgIAAAMAAAAAAAAAAAAQwBMAAABsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-06-28T01:57:52.138Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-28T01:57:52.138Z"
             },
             {
               "$type": "Document",
@@ -196,8 +189,7 @@
               "RelativeToolTip": "KonaBattle\\KonaBattle.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-06-22T09:20:47.515Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-22T09:20:47.515Z"
             },
             {
               "$type": "Document",
@@ -209,8 +201,7 @@
               "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\include\\xutility",
               "ViewState": "AgIAAJIPAAAAAAAAAAApwNsBAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-06-29T08:51:54.934Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-29T08:51:54.934Z"
             },
             {
               "$type": "Document",
@@ -222,8 +213,7 @@
               "RelativeToolTip": "KonaBattle\\game_mode\\game_manager.h",
               "ViewState": "AgIAAAcAAAAAAAAAAAAgwBkAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-06-29T08:10:53.276Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-29T08:10:53.276Z"
             },
             {
               "$type": "Document",
@@ -235,14 +225,13 @@
               "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\include\\type_traits",
               "ViewState": "AgIAADoJAAAAAAAAAAAWwEoJAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-06-29T08:51:34.25Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-29T08:51:34.25Z"
             }
           ]
         },
         {
-          "DockedWidth": 270,
-          "SelectedChildIndex": 5,
+          "DockedWidth": 315,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -261,10 +250,6 @@
               "Name": "ST:2:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{004be353-6879-467c-9d1e-9ac23cdf6d49}"
-            },
-            {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "chara_base.cpp",
@@ -272,7 +257,7 @@
               "RelativeDocumentMoniker": "KonaBattle\\character\\chara_base.cpp",
               "ToolTip": "C:\\Users\\momona\\Documents\\GitHub\\CppMiniGame_BattleSimulator\\KonaBattle\\KonaBattle\\character\\chara_base.cpp",
               "RelativeToolTip": "KonaBattle\\character\\chara_base.cpp",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAowBMAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAowBwAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-06-22T09:24:00.478Z",
               "EditorCaption": ""
@@ -287,8 +272,7 @@
               "RelativeToolTip": "KonaBattle\\game_mode\\log_manager.cpp",
               "ViewState": "AgIAABUAAAAAAAAAAAAowCQAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-06-30T07:06:52.231Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-30T07:06:52.231Z"
             },
             {
               "$type": "Document",
@@ -300,8 +284,7 @@
               "RelativeToolTip": "KonaBattle\\ui\\ui_manager.cpp",
               "ViewState": "AgIAAMsAAAAAAAAAAAAowN4AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-06-28T02:47:15.979Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-28T02:47:15.979Z"
             },
             {
               "$type": "Document",
@@ -313,8 +296,7 @@
               "RelativeToolTip": "KonaBattle\\defs.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-06-28T04:41:06.371Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-28T04:41:06.371Z"
             },
             {
               "$type": "Document",
@@ -326,8 +308,7 @@
               "RelativeToolTip": "KonaBattle\\character\\player.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-06-28T05:51:32.066Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-28T05:51:32.066Z"
             }
           ]
         }
