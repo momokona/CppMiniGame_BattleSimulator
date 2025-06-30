@@ -17,7 +17,7 @@ public:
 	}
 	void Update();
 
-	void CharaActionOnTurn(const std::shared_ptr<CharaBase>& attacker, const std::shared_ptr<CharaBase>& target, bool& death);
+	void CharaActionOnTurn(const std::shared_ptr<CharaBase>& ATTACKER, const std::shared_ptr<CharaBase>& TARGET, bool& death);
 
 
 	// 選択をセットする

@@ -1,7 +1,9 @@
 #include"chara_base.h"
 #include "../ui/ui_manager.h"
+#include <cassert>
 
 constexpr int POISON_DAMAGE = 10;
+constexpr int POISON_NUM = 3;
 
 CharaBase::CharaBase(const std::string NAME, const int MAX_HP, const int ATTACK, const int DEFENSE, const character::CharaType CHARA_TYPE)
 	: NAME_(NAME)
@@ -24,11 +26,12 @@ void CharaBase::Initialize()
 }
 
 
-void CharaBase::SufferAttack(const int OPPONENT_ATTACK, const std::string OPPONENT_NAME)
+void CharaBase::SufferAttack(const int OPPONENT_ATTACK, const std::string OPPONENT_NAME, ActionLog& log)
 {
 	// ダメージの計算
-	const int DAMAGE = OPPONENT_ATTACK - defense_;
+	const int DAMAGE = CalcDamage(OPPONENT_ATTACK, defense_);
 	CalcHp(DAMAGE);
+	log.damage = DAMAGE;
 	ui::DispBattleInfo(DAMAGE, OPPONENT_NAME, NAME_, hp_);
 }
 
@@ -47,12 +50,20 @@ void CharaBase::TurnEndProcess()
 			states_.erase(character::State::POISON);
 		}
 	}
+	behavior_ = BehaviorPattern::INVALID;
 }
 
-void CharaBase::SetState(character::State state)
+
+void CharaBase::DefenseProcess()
+{
+	defense_ *= character::DEFENSE_MAGNIFICATION;
+	ui::DispBehavior(BehaviorPattern::DEFENSE, NAME_);
+}
+
+void CharaBase::SetState(const character::State STATE)
 {
 	// NORMAL状態にセットされたら全ての状態異常を打ち消す
-	if(state == character::State::NORMAL)
+	if(STATE == character::State::NORMAL)
 	{
 		states_.clear();
 	}
@@ -64,8 +75,14 @@ void CharaBase::SetState(character::State state)
 		{
 			states_.erase(it);
 		}
+		// 毒の回数をセット
+		if (STATE == character::State::POISON)
+		{
+			poison_state_num_ = POISON_NUM;
+		}
 	}
-	states_.insert(state);
+	states_.insert(STATE);
+	ui::DispNewState(STATE, NAME_);
 }
 
 //	状態を反映させる(自分が攻撃を受ける側の時に毎回反映させる)
@@ -97,10 +114,25 @@ void CharaBase::ReflectState()
 // 防御したとき以外の処理
 void CharaBase::Act(std::shared_ptr<CharaBase> target)
 {
+	if (!target)
+	{
+		assert(false);
+		printf("攻撃される側のデータがありません\n");
+		return;
+	}
 	const BehaviorPattern BEHAVIOR = GetNextBehavior();
+	ActionLog log{NAME_, target->GetName(), BEHAVIOR};
+	if (BEHAVIOR == BehaviorPattern::DEFENSE)
+	{
+		log::AddLog(log);
+		return;
+	}
+
+	ui::DispBehavior(GetNextBehavior(), NAME_);
+
 	if (BEHAVIOR == BehaviorPattern::ATTACK)
 	{
-		target->SufferAttack(attack_, NAME_);
+		target->SufferAttack(attack_, NAME_, log);
 	}
 	else if(BEHAVIOR == BehaviorPattern::ITEM)
 	{
@@ -111,12 +143,14 @@ void CharaBase::Act(std::shared_ptr<CharaBase> target)
 		if (CHARA_TYPE_ == character::CharaType::PLAYER)
 		{
 			// 毒攻撃を使えるのは敵だけ
-			// アサート処理にかけたい
+			assert(false);
+			printf("ui_managerがありません\n");
 			return;
 		}
-		target->SufferAttack(POISON_DAMAGE, NAME_);
+		log.added_state.push_back(character::State::POISON);
 		target->SetState(character::State::POISON);
 	}
+	log::AddLog(log);
 }
 
 void CharaBase::CalcHp(const int DAMAGE)
@@ -126,4 +160,9 @@ void CharaBase::CalcHp(const int DAMAGE)
 	{
 		hp_ = 0;
 	}
+}
+
+const int CharaBase::CalcDamage(const int ATTACK, const int DEFENSE)
+{
+	return std::max(0, ATTACK * 2 - DEFENSE);
 }

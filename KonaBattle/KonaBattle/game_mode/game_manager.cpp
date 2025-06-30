@@ -3,10 +3,10 @@
 #include<iostream>
 #include "../ui/ui_manager.h"
 #include "../character/character_manager.h"
-GameManager* game_manager_ = nullptr;
+GameManager* GameManager::game_manager_ = nullptr;
 void GameManager::Create()
 {
-	if (!game_manager_)
+	if (game_manager_)
 	{
 		return;
 	}
@@ -27,11 +27,12 @@ void GameManager::Update()
 		ui::DispTitle();
 			break;
 	case GameState::INGAME:
+		ui::ShowActionOptions();
 		character::Update();
 			break;
 	case GameState::JUST_END:
 		ui::DispEndGame();
-		state_ == GameState::END;
+		state_ = GameState::END;
 		break;
 
 	}
@@ -57,7 +58,7 @@ const GameState GetGameState()
 	{
 		assert(false);
 		printf("game_manager‚ª‚ ‚è‚Ü‚¹‚ñ\n");
-		return;
+		return GameState();
 	}
 	return game_manager->GetState();
 }

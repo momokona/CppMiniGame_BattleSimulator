@@ -4,6 +4,7 @@
 #include <vector>
 #include"../defs.h"
 #include <memory>
+#include "../game_mode/log_manager.h"
 
 namespace character
 {
@@ -29,11 +30,11 @@ namespace character
 class CharaBase
 {
 public:
-	CharaBase(const std::string NAME, const int MAX_HP, const int ATTACK, const int DEFENSE, const character::CharaType CHARA_TYPE = character::CharaType::ENEMY);
+	CharaBase(const std::string NAME, const int MAX_HP, const int ATTACK, const int DEFENSE, const character::CharaType CHARA_TYPE);
 	virtual ~CharaBase() = 0;
 	virtual void Initialize();
-	void SufferAttack(const int OPPONENT_ATTACK, const std::string OPPONENT_NAME);
-	void SetState(character::State state);
+	void SufferAttack(const int OPPONENT_ATTACK, const std::string OPPONENT_NAME, ActionLog& log);
+	void SetState(const character::State STATE);
 	void ReflectState();	// èÛë‘ÇîΩâfÇ≥ÇπÇÈ
 	const bool IsDead()
 	{
@@ -47,12 +48,15 @@ public:
 		return BehaviorPattern::INVALID;	// åpè≥êÊÇ≈é¿ëï
 	}
 
-	void DefenseProcess()
+	void DefenseProcess();
+
+	const std::string GetName() const
 	{
-		defense_ *= character::DEFENSE_MAGNIFICATION;
+		return NAME_;
 	}
 protected:
 	void CalcHp(const int DAMAGE);
+	const int CalcDamage(const int ATTACK, const int DEFENSE);
 
 protected:
 	std::set<character::State> states_{};	// èÛë‘

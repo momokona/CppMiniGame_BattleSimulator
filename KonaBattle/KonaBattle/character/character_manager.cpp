@@ -1,16 +1,17 @@
 #include "character_manager.h"
 #include <cassert>
 #include "../game_mode/game_manager.h"
+#include "../ui/ui_manager.h"
 constexpr int MAX_ENEMY_NUM = 10;
 
 CharacterManager* CharacterManager::chara_manager_ = nullptr;
 
 CharacterManager::CharacterManager()
 {
-    player_ = std::make_shared<Player>(PLAYER_NAME, PLAYER_MAX_HP, PLAYER_INIT_ATTACK, PLAYER_INIT_DEFENSE);
+    player_ = std::make_shared<Player>(std::string(PLAYER_NAME), PLAYER_MAX_HP, PLAYER_INIT_ATTACK, PLAYER_INIT_DEFENSE);
     enemies_.reserve(MAX_ENEMY_NUM);
     // ‚Æ‚è‚ ‚¦‚¸ˆê‘Ì‚¾‚¯ƒf[ƒ^“o˜^
-    enemies_.push_back(std::make_shared<Enemy>(ENEMY1_NAME, ENEMY1_MAX_HP, ENEMY1_INIT_ATTACK, ENEMY1_INIT_DEFENSE));
+    enemies_.push_back(std::make_shared<Enemy>(std::string(ENEMY1_NAME), ENEMY1_MAX_HP, ENEMY1_INIT_ATTACK, ENEMY1_INIT_DEFENSE));
 }
 
 void CharacterManager::DefenseProcess()
@@ -33,7 +34,7 @@ void CharacterManager::DefenseProcess()
 
 void CharacterManager::Create()
 {
-	if (!chara_manager_)
+	if (chara_manager_)
 	{
 		return;
 	}
@@ -57,7 +58,6 @@ void CharacterManager::Update()
     }
     // –hŒä‚ğ‘I‘ğ‚µ‚½ê‡‚ÍAæ‚É–hŒä—Í‚ğã‚°‚Ä‚¨‚­
     DefenseProcess();
-    // ó‘Ô‚ğ”½‰f‚³‚¹‚é
     
     // –hŒäˆÈŠO‚Ìs“®‚ğ”½‰f(ƒvƒŒƒCƒ„[‚Ì•û‚ªæ‚ÉUŒ‚)
     // UŒ‚‚ğó‚¯‚é‘¤‚Íæ‚Éó‘Ô‚ª”½‰f‚³‚ê‚é
@@ -81,16 +81,16 @@ void CharacterManager::Update()
     TurnEndProcess();
 }
 
-void CharacterManager::CharaActionOnTurn(const std::shared_ptr<CharaBase>& attacker, const std::shared_ptr<CharaBase>& target, bool& death)
+void CharacterManager::CharaActionOnTurn(const std::shared_ptr<CharaBase>& ATTACKER, const std::shared_ptr<CharaBase>& TARGET, bool& death)
 {
-    target->ReflectState();
-    if (target->IsDead())
+    TARGET->ReflectState();
+    if (TARGET->IsDead())
     {
         death = true;
         return;
     }
-    attacker->Act(target);
-    if (target->IsDead())
+    ATTACKER->Act(TARGET);
+    if (TARGET->IsDead())
     {
         death = true;
         return;

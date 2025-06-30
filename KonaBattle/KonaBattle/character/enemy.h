@@ -8,7 +8,7 @@ struct Action
 {
 	BehaviorPattern behavior_{ BehaviorPattern::INVALID};
 	int priority{};
-	const bool operator<(const Action& other)
+	const bool operator<(const Action& other) const
 	{
 		return priority < other.priority;
 	}
@@ -18,7 +18,7 @@ class Enemy : public CharaBase
 {
 public:
 	Enemy(const std::string NAME, const int MAX_HP, const int ATTACK, const int DEFENSE)
-		:CharaBase(NAME, MAX_HP, ATTACK, DEFENSE) {
+		:CharaBase(NAME, MAX_HP, ATTACK, DEFENSE, character::CharaType::ENEMY) {
 	}
 	~Enemy() {}
 

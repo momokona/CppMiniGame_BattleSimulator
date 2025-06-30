@@ -2,19 +2,25 @@
 void Enemy::DecideAction()
 {
 	// HPが少ないときは防御優先
-	if (hp_ < MAX_HP_ / 4)
+	if (hp_ < MAX_HP_ / 2)
 	{
-		action_queue_.push({ BehaviorPattern::DEFENSE, 1 });
+		action_queue_.push({ BehaviorPattern::DEFENSE, 100 });
+		action_queue_.push({ BehaviorPattern::ATTACK, 99 });
 	}
 	else
 	{
 		action_queue_.push({ BehaviorPattern::ATTACK, 1 });
-		action_queue_.push({ BehaviorPattern::ITEM, 2 });
+		action_queue_.push({ BehaviorPattern::POISON, 2 });
 	}
 }
 
 const BehaviorPattern Enemy::GetNextBehavior()
 {
+	// 既にセット済みだったらその値を返す
+	if (behavior_ != BehaviorPattern::INVALID)
+	{
+		return behavior_;
+	}
 	if (action_queue_.empty())
 	{
 		// 行動が決まってなかったら決める

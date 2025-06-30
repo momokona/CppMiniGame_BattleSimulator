@@ -1,18 +1,19 @@
 #include "log_manager.h"
 #include <iostream>
 #include"../defs.h"
+#include <cassert>
+LogManager* LogManager::log_manager_ = nullptr;
 
-
-void BattleLogManager::ShowLog()
+void LogManager::ShowLog() const
 {
 	for (const auto& log : behavior_log_)
 	{
 		// TODO:ƒƒO‚Ìo—Í‚ð‚·‚é
-        const std::string BEHAVIIOR =  BehaviorToString(log.BEHAVIOR);
+        const std::string BEHAVIIOR = BehaviorToString(log.BEHAVIOR);
 	}
 }
 
-std::string BattleLogManager::BehaviorToString(BehaviorPattern pattern)
+std::string LogManager::BehaviorToString(BehaviorPattern pattern)
 {
     switch (pattern)
     {
@@ -25,4 +26,22 @@ std::string BattleLogManager::BehaviorToString(BehaviorPattern pattern)
     default:
         return "•s–¾";
     }
+}
+
+
+namespace log
+{
+void AddLog(const ActionLog& LOG)
+{
+    const auto log_manager = LogManager::GetLogManager();
+    if (!log_manager)
+    {
+        assert(false);
+        printf("ui_manager‚ª‚ ‚è‚Ü‚¹‚ñ\n");
+        return;
+    }
+    log_manager->AddLog(LOG);
+}
+
+
 }
