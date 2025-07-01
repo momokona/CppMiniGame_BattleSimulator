@@ -6,7 +6,7 @@
 constexpr int POISON_DAMAGE = 10;
 constexpr int POISON_NUM = 3;
 
-CharaBase::CharaBase(const std::string NAME, const int MAX_HP, const int ATTACK, const int DEFENSE, const character::CharaType CHARA_TYPE)
+CharaBase::CharaBase(const std::string& NAME, const int MAX_HP, const int ATTACK, const int DEFENSE, const character::CharaType CHARA_TYPE)
 	: NAME_(NAME)
 	, MAX_HP_(MAX_HP)
 	, attack_(ATTACK)
@@ -27,7 +27,7 @@ void CharaBase::Initialize()
 }
 
 
-void CharaBase::SufferAttack(const int OPPONENT_ATTACK, const std::string OPPONENT_NAME, ActionLog& log)
+void CharaBase::SufferAttack(const int OPPONENT_ATTACK, const std::string& OPPONENT_NAME, ActionLog& log)
 {
 	// ダメージの計算
 	const int DAMAGE = CalcDamage(OPPONENT_ATTACK, defense_);
@@ -43,10 +43,11 @@ void CharaBase::TurnEndProcess()
 	{
 		defense_ /= character::DEFENSE_MAGNIFICATION;
 	}
+
 	// 状態異常・毒の処理
-	if (poison_state_num_ > 0)
+	for(auto abnormal_state_info : abnormal_states_info_)
 	{
-		if (--poison_state_num_ == 0)
+		if (--abnormal_state_info.second == 0)
 		{
 			states_.erase(character::State::POISON);
 		}
@@ -79,7 +80,7 @@ void CharaBase::SetState(const character::State STATE)
 		// 毒の回数をセット
 		if (STATE == character::State::POISON)
 		{
-			poison_state_num_ = POISON_NUM;
+			abnormal_states_info_[character::State::POISON] = POISON_NUM;
 		}
 	}
 	states_.insert(STATE);
@@ -168,5 +169,5 @@ void CharaBase::CalcHp(const int DAMAGE)
 
 const int CharaBase::CalcDamage(const int ATTACK, const int DEFENSE)
 {
-	return std::max(0, ATTACK * 2 - DEFENSE);
+	return std::max(0, ATTACK * ATTACK_MULTIPLIER - DEFENSE);
 }

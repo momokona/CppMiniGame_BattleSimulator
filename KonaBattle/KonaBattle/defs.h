@@ -11,6 +11,8 @@ constexpr int ENEMY1_MAX_HP = 70;
 constexpr int ENEMY1_INIT_ATTACK = 8;
 constexpr int ENEMY1_INIT_DEFENSE = 3;
 
+constexpr int ATTACK_MULTIPLIER = 2;
+
 // 行動パターン
 enum class BehaviorPattern
 {

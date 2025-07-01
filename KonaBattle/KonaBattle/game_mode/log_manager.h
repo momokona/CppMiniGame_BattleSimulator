@@ -33,13 +33,16 @@ public:
     {
         return log_manager_;
     }
+    void ShowRecentLog(const int NUM);
+
 private:
     // コンストラクタの隠蔽
     LogManager() {};
     LogManager(const LogManager& obj) {};
     // 行動を文字に直す
-    const std::string& BehaviorToString(const BehaviorPattern PATTERN) const;
-    const std::string& StateToString(const character::State STATE) const;
+    const std::string BehaviorToString(const BehaviorPattern PATTERN) const;
+    const std::string StateToString(const character::State STATE) const;
+    void ShowOneLog(const ActionLog& log) const;
 private:
     std::vector<ActionLog> behavior_log_{};	// 行動履歴
     static LogManager* log_manager_;
@@ -49,4 +52,7 @@ namespace action_log
 {
 void AddLog(const ActionLog& LOG);
 void ShowLog();
+void ShowRecentLog(const int NUM);
+
 }   // namespace action_log
+

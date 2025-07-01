@@ -4,6 +4,7 @@
 #include <vector>
 #include"../defs.h"
 #include <memory>
+#include <unordered_map>
 
 // 前方参照
 struct ActionLog;
@@ -32,10 +33,10 @@ namespace character
 class CharaBase
 {
 public:
-	CharaBase(const std::string NAME, const int MAX_HP, const int ATTACK, const int DEFENSE, const character::CharaType CHARA_TYPE);
+	CharaBase(const std::string& NAME, const int MAX_HP, const int ATTACK, const int DEFENSE, const character::CharaType CHARA_TYPE);
 	virtual ~CharaBase() = 0;
 	virtual void Initialize();
-	void SufferAttack(const int OPPONENT_ATTACK, const std::string OPPONENT_NAME, ActionLog& log);
+	void SufferAttack(const int OPPONENT_ATTACK, const std::string& OPPONENT_NAME, ActionLog& log);
 	void SetState(const character::State STATE);
 	void ReflectState();	// 状態を反映させる
 	const bool IsDead()
@@ -45,7 +46,7 @@ public:
 	void Act(std::shared_ptr<CharaBase> target);
 
 	void TurnEndProcess();
-	virtual const BehaviorPattern GetNextBehavior()
+	virtual BehaviorPattern GetNextBehavior()
 	{
 		return BehaviorPattern::INVALID;	// 継承先で実装
 	}
@@ -61,6 +62,7 @@ protected:
 	const int CalcDamage(const int ATTACK, const int DEFENSE);
 
 protected:
+	std::unordered_map<character::State, int> abnormal_states_info_{};	// 状態異常になったターン
 	std::set<character::State> states_{};	// 状態
 	const std::string NAME_{};	// 名前
 	const character::CharaType CHARA_TYPE_{ character::CharaType::ENEMY };
@@ -68,7 +70,6 @@ protected:
 	int hp_{};	// 体力
 	int attack_{};	// 攻撃力
 	int defense_{};	// 防御力
-	int poison_state_num_{};	// 毒状態になったターン
 
 	BehaviorPattern behavior_{ BehaviorPattern::INVALID };
 

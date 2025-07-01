@@ -3,7 +3,7 @@
 class Player :public CharaBase
 {
 public:
-	Player(const std::string NAME, const int MAX_HP, const int ATTACK, const int DEFENSE)
+	Player(const std::string& NAME, const int MAX_HP, const int ATTACK, const int DEFENSE)
 		:CharaBase(NAME, MAX_HP, ATTACK, DEFENSE, character::CharaType::PLAYER) {
 	}
 	~Player() {}
@@ -12,12 +12,12 @@ public:
 	{
 		behavior_ = behavior;
 	}
-	const BehaviorPattern GetNextBehavior() override
+	BehaviorPattern GetNextBehavior() override
 	{
 		return behavior_;
 	}
 private:
 	// 一つしかクラスを作りたくないためコピーコンストラクタは禁止
-	Player(const Player&)
-		:CharaBase(NAME_, 0, 0, 0, character::CharaType::PLAYER) {};
+	Player(const Player&) = delete;
+	Player& operator=(const Player&) = delete;
 };

@@ -1,20 +1,18 @@
 #include "enemy.h"
+#include <random>
 void Enemy::DecideAction()
 {
-	// HPが少ないときは防御優先
-	if (hp_ < MAX_HP_ / 2)
-	{
-		action_queue_.push({ BehaviorPattern::DEFENSE, 100 });
-		action_queue_.push({ BehaviorPattern::ATTACK, 99 });
-	}
-	else
-	{
-		action_queue_.push({ BehaviorPattern::ATTACK, 1 });
-		action_queue_.push({ BehaviorPattern::POISON, 2 });
-	}
+	static std::random_device rd;	// ランダムな数を一つ作る道具(シード)
+	static std::mt19937 gen(rd());	// 乱数を次々に作る機械、シードがないと動かない
+
+	std::uniform_int_distribution<> dist(0, 99);	// genから生成された乱数を0～99の範囲に整える
+
+	action_queue_.push({ BehaviorPattern::ATTACK, dist(gen) });
+	action_queue_.push({ BehaviorPattern::DEFENSE, dist(gen) });
+	action_queue_.push({ BehaviorPattern::POISON, dist(gen) });
 }
 
-const BehaviorPattern Enemy::GetNextBehavior()
+BehaviorPattern Enemy::GetNextBehavior()
 {
 	// 既にセット済みだったらその値を返す
 	if (behavior_ != BehaviorPattern::INVALID)

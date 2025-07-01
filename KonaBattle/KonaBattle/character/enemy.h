@@ -17,13 +17,13 @@ struct Action
 class Enemy : public CharaBase
 {
 public:
-	Enemy(const std::string NAME, const int MAX_HP, const int ATTACK, const int DEFENSE)
+	Enemy(const std::string& NAME, const int MAX_HP, const int ATTACK, const int DEFENSE)
 		:CharaBase(NAME, MAX_HP, ATTACK, DEFENSE, character::CharaType::ENEMY) {
 	}
 	~Enemy() {}
 
 	void DecideAction();
-	const BehaviorPattern GetNextBehavior() override;
+	BehaviorPattern GetNextBehavior() override;
 
 private:
 	std::priority_queue<enemy::Action> action_queue_{};	// 優先順位がついてる行動パターン

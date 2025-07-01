@@ -1,8 +1,6 @@
 ﻿  KonaBattle.cpp
-  chara_base.cpp
+  character_manager.cpp
   game_manager.cpp
-  log_manager.cpp
+  ui_manager.cpp
   コードを生成中...
-C:\Users\momon\OneDrive\ドキュメント\GitHub\CppMiniGame_BattleSimulator\KonaBattle\KonaBattle\game_mode\log_manager.cpp(66,1): warning C4172: ローカル変数またはテンポラリ  のアドレスを返します
-C:\Users\momon\OneDrive\ドキュメント\GitHub\CppMiniGame_BattleSimulator\KonaBattle\KonaBattle\game_mode\log_manager.cpp(81,1): warning C4172: ローカル変数またはテンポラリ  のアドレスを返します
   KonaBattle.vcxproj -> C:\Users\momon\OneDrive\ドキュメント\GitHub\CppMiniGame_BattleSimulator\KonaBattle\x64\Debug\KonaBattle.exe
