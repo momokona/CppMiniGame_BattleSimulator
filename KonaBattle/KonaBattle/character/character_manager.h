@@ -16,7 +16,7 @@ public:
 		return chara_manager_;
 	}
 	void Update();
-
+	// 状態異常の反映と行動をする
 	void CharaActionOnTurn(const std::shared_ptr<CharaBase>& ATTACKER, const std::shared_ptr<CharaBase>& TARGET, bool& death);
 
 
@@ -24,7 +24,7 @@ public:
 	void SetChoiceToPc(const BehaviorPattern behavior) const;
 
 private:
-	CharacterManager();
+	CharacterManager() {};
 	CharacterManager(const CharacterManager& other) {};
 	void DefenseProcess();
 	// 1ターンごとのリセット
@@ -39,4 +39,5 @@ namespace character
 // 外部関数
 void SetChoiceAction(const BehaviorPattern behavior);
 void Update();
+void Initialize();
 }

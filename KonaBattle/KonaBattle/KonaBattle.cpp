@@ -15,6 +15,8 @@ int main()
     LogManager::Create();
     UiManager::Create();
 
+    character::Initialize();
+
     while (game_manager::GetGameState() != GameState::END)
     {
         game_manager::Update();

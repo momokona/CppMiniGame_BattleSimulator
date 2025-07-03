@@ -1,6 +1,4 @@
-﻿  KonaBattle.cpp
-  character_manager.cpp
-  game_manager.cpp
+﻿  behavior_defs.cpp
   ui_manager.cpp
   コードを生成中...
   KonaBattle.vcxproj -> C:\Users\momon\OneDrive\ドキュメント\GitHub\CppMiniGame_BattleSimulator\KonaBattle\x64\Debug\KonaBattle.exe

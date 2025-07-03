@@ -129,6 +129,8 @@
     <ClCompile Include="character\chara_base.cpp" />
     <ClCompile Include="character\enemy.cpp" />
     <ClCompile Include="character\player.cpp" />
+    <ClCompile Include="defs\behavior_defs.cpp" />
+    <ClCompile Include="defs\state_defs.cpp" />
     <ClCompile Include="game_mode\game_manager.cpp" />
     <ClCompile Include="game_mode\log_manager.cpp" />
     <ClCompile Include="KonaBattle.cpp" />
@@ -139,7 +141,9 @@
     <ClInclude Include="character\chara_base.h" />
     <ClInclude Include="character\enemy.h" />
     <ClInclude Include="character\player.h" />
-    <ClInclude Include="defs.h" />
+    <ClInclude Include="defs\behavior_defs.h" />
+    <ClInclude Include="defs\defs.h" />
+    <ClInclude Include="defs\state_defs.h" />
     <ClInclude Include="game_mode\game_manager.h" />
     <ClInclude Include="game_mode\log_manager.h" />
     <ClInclude Include="ui\ui_manager.h" />

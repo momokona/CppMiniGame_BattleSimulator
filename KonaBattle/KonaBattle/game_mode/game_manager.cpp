@@ -32,12 +32,18 @@ void GameManager::Update()
 		character::Update();
 			break;
 	case GameState::JUST_END:
-		ui::DispEndGame();
-		action_log::ShowLog();
-		state_ = GameState::END;
+		EndGame();
 		break;
 
 	}
+}
+
+// ƒQ[ƒ€‚ªI—¹‚µ‚½‚Æ‚«‚Ìˆ—
+void GameManager::EndGame()
+{
+	ui::DispEndGame();
+	action_log::ShowLog();
+	state_ = GameState::END;
 }
 
 namespace game_manager

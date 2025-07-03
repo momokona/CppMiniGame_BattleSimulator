@@ -6,13 +6,17 @@ constexpr int MAX_ENEMY_NUM = 10;
 
 CharacterManager* CharacterManager::chara_manager_ = nullptr;
 
-CharacterManager::CharacterManager()
+void CharacterManager::Initialize()
 {
     player_ = std::make_shared<Player>(std::string(PLAYER_NAME), PLAYER_MAX_HP, PLAYER_INIT_ATTACK, PLAYER_INIT_DEFENSE);
+    player_->Initialize();
     enemies_.reserve(MAX_ENEMY_NUM);
     // とりあえず一体だけデータ登録
     enemies_.push_back(std::make_shared<Enemy>(std::string(ENEMY1_NAME), ENEMY1_MAX_HP, ENEMY1_INIT_ATTACK, ENEMY1_INIT_DEFENSE));
+    enemies_.back()->Initialize();
 }
+
+
 
 void CharacterManager::DefenseProcess()
 {
@@ -50,7 +54,7 @@ void CharacterManager::Destroy()
 void CharacterManager::Update()
 {
     // 敵とは一体ずつ戦うとする
-    if (!player_ || !enemies_.at(0))
+    if (!player_ || enemies_.empty() || !enemies_.at(0))
     {
         assert(false);
         printf("キャラデータがありません\n");
@@ -80,7 +84,7 @@ void CharacterManager::Update()
     }
     TurnEndProcess();
 }
-
+// 状態異常の反映と行動をする
 void CharacterManager::CharaActionOnTurn(const std::shared_ptr<CharaBase>& ATTACKER, const std::shared_ptr<CharaBase>& TARGET, bool& death)
 {
     TARGET->ReflectState();
@@ -100,7 +104,7 @@ void CharacterManager::CharaActionOnTurn(const std::shared_ptr<CharaBase>& ATTAC
 void CharacterManager::TurnEndProcess()
 {
     player_->TurnEndProcess();
-    for (auto enemy : enemies_)
+    for (const auto& enemy : enemies_)
     {
         enemy->TurnEndProcess();
     }
@@ -114,7 +118,7 @@ void CharacterManager::SetChoiceToPc(const BehaviorPattern behavior) const
         printf("プレイヤーデータがありません\n");
         return;
     }
-    player_->SetBehevior(behavior);
+    player_->Setbehavior(behavior);
 }
 
 
@@ -142,6 +146,18 @@ void Update()
         return;
     }
     chara_manager->Update();
+}
+
+void Initialize()
+{
+    auto chara_manager = CharacterManager::GetCharacterManager();
+    if (!chara_manager)
+    {
+        assert(false);
+        printf("chara_managerがありません\n");
+        return;
+    }
+    chara_manager->Initialize();
 }
 
 }

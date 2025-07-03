@@ -27,6 +27,7 @@ public:
 private:
 	GameManager() {};
 	GameManager(const GameManager&) {};
+	void EndGame();
 private:
 	static GameManager* game_manager_;
 	GameState state_{ GameState::TITLE };

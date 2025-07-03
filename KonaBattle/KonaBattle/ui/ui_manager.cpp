@@ -1,9 +1,10 @@
 #include "ui_manager.h"
-#include "../defs.h"
+#include "../defs/defs.h"
 #include <cassert>
 #include "../game_mode/game_manager.h"
 #include<conio.h>
 #include "../character/character_manager.h"
+#include "../defs/state_defs.h"
 UiManager* UiManager::ui_manager_ = nullptr;
 
 void UiManager::Create()
@@ -29,16 +30,13 @@ void UiManager::DispBattleInfo(const DispInfo& disp_info) const
 
 void UiManager::DispReflectState(const DispInfo& disp_info) const
 {
-	switch (disp_info.state)
+	if (disp_info.state == character::State::NORMAL)
 	{
-	case character::State::NORMAL:
 		return;
-	case character::State::POISON:
-		printf("%sは毒によって%dダメージを受けた！\n", disp_info.defenser_name.c_str(), disp_info.damage);
-		break;
-	default:
-		break;
 	}
+	const std::string damage_message = state_map::GetDamageMessage(disp_info.state);
+	printf(damage_message.c_str(), disp_info.defenser_name.c_str(), disp_info.damage);
+
 	printf("%sの残りのHPは%dになった。\n", disp_info.defenser_name.c_str(), disp_info.hp);
 	printf("\n");
 	if (disp_info.hp <= 0)
@@ -80,10 +78,10 @@ void UiManager::ShowActionOptions() const
 	system("cls");
 }
 
-void UiManager::DispBehavior(const BehaviorPattern BEHEVIOR, const std::string ATTACKER_NAME)
+void UiManager::DispBehavior(const BehaviorPattern BEHAVIOR, const std::string& ATTACKER_NAME)
 {
 	printf("\n");
-	switch (BEHEVIOR)
+	switch (BEHAVIOR)
 	{
 	case BehaviorPattern::ATTACK:
 		printf("%sの攻撃！\n", ATTACKER_NAME.c_str());
@@ -122,21 +120,9 @@ void UiManager::DispTitle() const
 	game_manager::SetGameState(GameState::INGAME);
 }
 
-void UiManager::DispNewState(const character::State STATE, const std::string NAME) const
+void UiManager::DispNewState(const character::State STATE, const std::string& NAME) const
 {
-	std::string state{};
-	switch (STATE)
-	{
-	case character::State::NORMAL:
-		state = "通常";
-		break;
-	case character::State::POISON:
-		state = "毒";
-		break;
-	default:
-		break;
-	}
-	printf("%sは%s状態になった！\n", NAME.c_str(), state.c_str());
+	printf("%sは%s状態になった！\n", NAME.c_str(), state_map::GetStateName(STATE).c_str());
 }
 
 
@@ -144,7 +130,7 @@ void UiManager::DispNewState(const character::State STATE, const std::string NAM
 // 外部関数
 namespace ui
 {
-void DispBattleInfo(const int DAMAGE, const std::string ATTACKER_NAME, const std::string DEFENSER_NAME, const int DEFENSER_HP)
+void DispBattleInfo(const int DAMAGE, const std::string& ATTACKER_NAME, const std::string& DEFENSER_NAME, const int DEFENSER_HP)
 {
 	const auto ui_manager = UiManager::GetUiManager();
 	if (!ui_manager)
@@ -173,7 +159,7 @@ void ShowActionOptions()
 	ui_manager->ShowActionOptions();
 }
 
-void DispBehavior(const BehaviorPattern BEHEVIOR, const std::string ATTACKER_NAME)
+void DispBehavior(const BehaviorPattern behavior, const std::string& ATTACKER_NAME)
 {
 	const auto ui_manager = UiManager::GetUiManager();
 	if (!ui_manager)
@@ -182,10 +168,10 @@ void DispBehavior(const BehaviorPattern BEHEVIOR, const std::string ATTACKER_NAM
 		printf("ui_managerがありません\n");
 		return;
 	}
-	ui_manager->DispBehavior(BEHEVIOR, ATTACKER_NAME);
+	ui_manager->DispBehavior(behavior, ATTACKER_NAME);
 }
 
-void DispReflectState(const character::State STATE, const std::string NAME, const int DAMAGE, const int HP)
+void DispReflectState(const character::State STATE, const std::string& NAME, const int DAMAGE, const int HP)
 {
 	const auto ui_manager = UiManager::GetUiManager();
 	if (!ui_manager)
@@ -226,7 +212,7 @@ void DispTitle()
 	ui_manager->DispTitle();
 }
 
-void DispNewState(const character::State STATE, const std::string NAME)
+void DispNewState(const character::State STATE, const std::string& NAME)
 {
 	const auto ui_manager = UiManager::GetUiManager();
 	if (!ui_manager)

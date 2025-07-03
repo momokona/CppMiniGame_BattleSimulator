@@ -2,9 +2,10 @@
 #include "../ui/ui_manager.h"
 #include <cassert>
 #include "../game_mode/log_manager.h"
+#include "../defs/state_defs.h"
 
-constexpr int POISON_DAMAGE = 10;
-constexpr int POISON_NUM = 3;
+
+
 
 CharaBase::CharaBase(const std::string& NAME, const int MAX_HP, const int ATTACK, const int DEFENSE, const character::CharaType CHARA_TYPE)
 	: NAME_(NAME)
@@ -12,9 +13,7 @@ CharaBase::CharaBase(const std::string& NAME, const int MAX_HP, const int ATTACK
 	, attack_(ATTACK)
 	, defense_(DEFENSE)
 	, CHARA_TYPE_(CHARA_TYPE)
-{
-	Initialize();
-}
+{}
 
 CharaBase::~CharaBase()
 {
@@ -23,17 +22,17 @@ CharaBase::~CharaBase()
 void CharaBase::Initialize()
 {
 	hp_ = MAX_HP_;
-	states_.clear();
+	abnormal_states_info_.clear();
 }
 
 
-void CharaBase::SufferAttack(const int OPPONENT_ATTACK, const std::string& OPPONENT_NAME, ActionLog& log)
+int CharaBase::SufferAttack(const int OPPONENT_ATTACK, const std::string& OPPONENT_NAME)
 {
 	// ダメージの計算
 	const int DAMAGE = CalcDamage(OPPONENT_ATTACK, defense_);
 	CalcHp(DAMAGE);
-	log.damage = DAMAGE;
 	ui::DispBattleInfo(DAMAGE, OPPONENT_NAME, NAME_, hp_);
+	return DAMAGE;
 }
 
 void CharaBase::TurnEndProcess()
@@ -42,15 +41,6 @@ void CharaBase::TurnEndProcess()
 	if (behavior_ == BehaviorPattern::DEFENSE)
 	{
 		defense_ /= character::DEFENSE_MAGNIFICATION;
-	}
-
-	// 状態異常・毒の処理
-	for(auto abnormal_state_info : abnormal_states_info_)
-	{
-		if (--abnormal_state_info.second == 0)
-		{
-			states_.erase(character::State::POISON);
-		}
 	}
 	behavior_ = BehaviorPattern::INVALID;
 }
@@ -67,30 +57,27 @@ void CharaBase::SetState(const character::State STATE)
 	// NORMAL状態にセットされたら全ての状態異常を打ち消す
 	if(STATE == character::State::NORMAL)
 	{
-		states_.clear();
+		abnormal_states_info_.clear();
 	}
 	else
 	{
 		// 状態の中に普通があった場合は消す
-		const auto it = states_.find(character::State::NORMAL);
-		if (it != states_.end())
+		const auto it = abnormal_states_info_.find(character::State::NORMAL);
+		if (it != abnormal_states_info_.end())
 		{
-			states_.erase(it);
+			abnormal_states_info_.erase(it);
 		}
-		// 毒の回数をセット
-		if (STATE == character::State::POISON)
-		{
-			abnormal_states_info_[character::State::POISON] = POISON_NUM;
-		}
+		// 影響を受ける回数をセット
+		abnormal_states_info_[STATE] = StateMap::GetStateMap()->GetTurnNum(STATE);
+
 	}
-	states_.insert(STATE);
 	ui::DispNewState(STATE, NAME_);
 }
 
 //	状態を反映させる(自分が攻撃を受ける側の時に毎回反映させる)
 void CharaBase::ReflectState()
 {
-	for (const auto state : states_)
+	for (auto it = abnormal_states_info_.begin(); it != abnormal_states_info_.end();)
 	{
 		int damage{};
 		// 死んでいたら終了
@@ -98,19 +85,28 @@ void CharaBase::ReflectState()
 		{
 			break;
 		}
-		if (state == character::State::NORMAL)
+		if (it->first == character::State::NORMAL)
 		{
 			// 状態異常ない場合は探索終了
 			break;
 		}
-		else if (state == character::State::POISON)
-		{
-			// 毒状態の時はダメージを受ける
-			damage = POISON_DAMAGE;
-			CalcHp(damage);
-		}
+
+		// 状態異常効果を反映
+		const auto EFFECT_FUNC = state_map::GetStateEffectFunc(it->first);
+		EFFECT_FUNC(*this, damage);
+
 		// 状態異常を反映した結果をUIに出す
-		ui::DispReflectState(character::State::POISON, NAME_, damage, hp_);
+		ui::DispReflectState(it->first, NAME_, damage, hp_);
+
+		// 状態異常の寿命処理
+		if (--it->second == 0)
+		{
+			it = abnormal_states_info_.erase(it);
+		}
+		else
+		{
+			++it;
+		}
 	}
 }
 // 防御したとき以外の処理
@@ -134,7 +130,8 @@ void CharaBase::Act(std::shared_ptr<CharaBase> target)
 
 	if (BEHAVIOR == BehaviorPattern::ATTACK)
 	{
-		target->SufferAttack(attack_, NAME_, log);
+		const int DAMAGE = target->SufferAttack(attack_, NAME_);
+		log.damage = DAMAGE;
 	}
 	else if(BEHAVIOR == BehaviorPattern::ITEM)
 	{
@@ -161,7 +158,7 @@ void CharaBase::Act(std::shared_ptr<CharaBase> target)
 void CharaBase::CalcHp(const int DAMAGE)
 {
 	hp_ -= DAMAGE;
-	if (IsDead())
+	if (hp_ < 0)
 	{
 		hp_ = 0;
 	}
@@ -171,3 +168,5 @@ const int CharaBase::CalcDamage(const int ATTACK, const int DEFENSE)
 {
 	return std::max(0, ATTACK * ATTACK_MULTIPLIER - DEFENSE);
 }
+
+

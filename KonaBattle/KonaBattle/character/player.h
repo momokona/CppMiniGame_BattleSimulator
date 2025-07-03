@@ -8,7 +8,7 @@ public:
 	}
 	~Player() {}
 	// プレイヤーの選択によって決まる
-	void SetBehevior(const BehaviorPattern behavior)
+	void Setbehavior(const BehaviorPattern behavior)
 	{
 		behavior_ = behavior;
 	}
