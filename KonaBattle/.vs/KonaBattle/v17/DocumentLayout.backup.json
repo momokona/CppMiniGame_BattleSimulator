@@ -3,20 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\momon\\OneDrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\GitHub\\CppMiniGame_BattleSimulator\\KonaBattle\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AD7D1D24-5A92-4765-BF7E-7D027F8BDE9E}|KonaBattle\\KonaBattle.vcxproj|C:\\Users\\momon\\OneDrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\GitHub\\CppMiniGame_BattleSimulator\\KonaBattle\\KonaBattle\\defs\\behavior_defs.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{AD7D1D24-5A92-4765-BF7E-7D027F8BDE9E}|KonaBattle\\KonaBattle.vcxproj|solutionrelative:KonaBattle\\defs\\behavior_defs.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AD7D1D24-5A92-4765-BF7E-7D027F8BDE9E}|KonaBattle\\KonaBattle.vcxproj|C:\\Users\\momon\\OneDrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\GitHub\\CppMiniGame_BattleSimulator\\KonaBattle\\KonaBattle\\defs\\behavior_defs.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{AD7D1D24-5A92-4765-BF7E-7D027F8BDE9E}|KonaBattle\\KonaBattle.vcxproj|solutionrelative:KonaBattle\\defs\\behavior_defs.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{AD7D1D24-5A92-4765-BF7E-7D027F8BDE9E}|KonaBattle\\KonaBattle.vcxproj|C:\\Users\\momon\\OneDrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\GitHub\\CppMiniGame_BattleSimulator\\KonaBattle\\KonaBattle\\game_mode\\log_manager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{AD7D1D24-5A92-4765-BF7E-7D027F8BDE9E}|KonaBattle\\KonaBattle.vcxproj|solutionrelative:KonaBattle\\game_mode\\log_manager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AD7D1D24-5A92-4765-BF7E-7D027F8BDE9E}|KonaBattle\\KonaBattle.vcxproj|C:\\Users\\momon\\OneDrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\GitHub\\CppMiniGame_BattleSimulator\\KonaBattle\\KonaBattle\\defs\\state_defs.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{AD7D1D24-5A92-4765-BF7E-7D027F8BDE9E}|KonaBattle\\KonaBattle.vcxproj|solutionrelative:KonaBattle\\defs\\state_defs.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{AD7D1D24-5A92-4765-BF7E-7D027F8BDE9E}|KonaBattle\\KonaBattle.vcxproj|C:\\Users\\momon\\OneDrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\GitHub\\CppMiniGame_BattleSimulator\\KonaBattle\\KonaBattle\\game_mode\\log_manager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{AD7D1D24-5A92-4765-BF7E-7D027F8BDE9E}|KonaBattle\\KonaBattle.vcxproj|solutionrelative:KonaBattle\\game_mode\\log_manager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD7D1D24-5A92-4765-BF7E-7D027F8BDE9E}|KonaBattle\\KonaBattle.vcxproj|C:\\Users\\momon\\OneDrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\GitHub\\CppMiniGame_BattleSimulator\\KonaBattle\\KonaBattle\\defs\\behavior_defs.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{AD7D1D24-5A92-4765-BF7E-7D027F8BDE9E}|KonaBattle\\KonaBattle.vcxproj|solutionrelative:KonaBattle\\defs\\behavior_defs.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AD7D1D24-5A92-4765-BF7E-7D027F8BDE9E}|KonaBattle\\KonaBattle.vcxproj|C:\\Users\\momon\\OneDrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\GitHub\\CppMiniGame_BattleSimulator\\KonaBattle\\KonaBattle\\ui\\ui_manager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -27,24 +23,28 @@
       "RelativeMoniker": "D:0:0:{AD7D1D24-5A92-4765-BF7E-7D027F8BDE9E}|KonaBattle\\KonaBattle.vcxproj|solutionrelative:KonaBattle\\ui\\ui_manager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AD7D1D24-5A92-4765-BF7E-7D027F8BDE9E}|KonaBattle\\KonaBattle.vcxproj|C:\\Users\\momon\\OneDrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\GitHub\\CppMiniGame_BattleSimulator\\KonaBattle\\KonaBattle\\character\\chara_base.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{AD7D1D24-5A92-4765-BF7E-7D027F8BDE9E}|KonaBattle\\KonaBattle.vcxproj|solutionrelative:KonaBattle\\character\\chara_base.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{AD7D1D24-5A92-4765-BF7E-7D027F8BDE9E}|KonaBattle\\KonaBattle.vcxproj|C:\\Users\\momon\\OneDrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\GitHub\\CppMiniGame_BattleSimulator\\KonaBattle\\KonaBattle\\character\\chara_base.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{AD7D1D24-5A92-4765-BF7E-7D027F8BDE9E}|KonaBattle\\KonaBattle.vcxproj|solutionrelative:KonaBattle\\character\\chara_base.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AD7D1D24-5A92-4765-BF7E-7D027F8BDE9E}|KonaBattle\\KonaBattle.vcxproj|C:\\Users\\momon\\OneDrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\GitHub\\CppMiniGame_BattleSimulator\\KonaBattle\\KonaBattle\\game_mode\\log_manager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{AD7D1D24-5A92-4765-BF7E-7D027F8BDE9E}|KonaBattle\\KonaBattle.vcxproj|solutionrelative:KonaBattle\\game_mode\\log_manager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AD7D1D24-5A92-4765-BF7E-7D027F8BDE9E}|KonaBattle\\KonaBattle.vcxproj|C:\\Users\\momon\\OneDrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\GitHub\\CppMiniGame_BattleSimulator\\KonaBattle\\KonaBattle\\defs\\state_defs.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{AD7D1D24-5A92-4765-BF7E-7D027F8BDE9E}|KonaBattle\\KonaBattle.vcxproj|solutionrelative:KonaBattle\\defs\\state_defs.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{AD7D1D24-5A92-4765-BF7E-7D027F8BDE9E}|KonaBattle\\KonaBattle.vcxproj|C:\\Users\\momon\\OneDrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\GitHub\\CppMiniGame_BattleSimulator\\KonaBattle\\KonaBattle\\defs\\behavior_defs.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{AD7D1D24-5A92-4765-BF7E-7D027F8BDE9E}|KonaBattle\\KonaBattle.vcxproj|solutionrelative:KonaBattle\\defs\\behavior_defs.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AD7D1D24-5A92-4765-BF7E-7D027F8BDE9E}|KonaBattle\\KonaBattle.vcxproj|C:\\Users\\momon\\OneDrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\GitHub\\CppMiniGame_BattleSimulator\\KonaBattle\\KonaBattle\\defs\\defs.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{AD7D1D24-5A92-4765-BF7E-7D027F8BDE9E}|KonaBattle\\KonaBattle.vcxproj|solutionrelative:KonaBattle\\defs\\defs.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD7D1D24-5A92-4765-BF7E-7D027F8BDE9E}|KonaBattle\\KonaBattle.vcxproj|C:\\Users\\momon\\OneDrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\GitHub\\CppMiniGame_BattleSimulator\\KonaBattle\\KonaBattle\\defs\\state_defs.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{AD7D1D24-5A92-4765-BF7E-7D027F8BDE9E}|KonaBattle\\KonaBattle.vcxproj|solutionrelative:KonaBattle\\defs\\state_defs.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD7D1D24-5A92-4765-BF7E-7D027F8BDE9E}|KonaBattle\\KonaBattle.vcxproj|C:\\Users\\momon\\OneDrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\GitHub\\CppMiniGame_BattleSimulator\\KonaBattle\\KonaBattle\\character\\chara_base.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{AD7D1D24-5A92-4765-BF7E-7D027F8BDE9E}|KonaBattle\\KonaBattle.vcxproj|solutionrelative:KonaBattle\\character\\chara_base.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD7D1D24-5A92-4765-BF7E-7D027F8BDE9E}|KonaBattle\\KonaBattle.vcxproj|C:\\Users\\momon\\OneDrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\GitHub\\CppMiniGame_BattleSimulator\\KonaBattle\\KonaBattle\\defs\\state_defs.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{AD7D1D24-5A92-4765-BF7E-7D027F8BDE9E}|KonaBattle\\KonaBattle.vcxproj|solutionrelative:KonaBattle\\defs\\state_defs.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AD7D1D24-5A92-4765-BF7E-7D027F8BDE9E}|KonaBattle\\KonaBattle.vcxproj|C:\\Users\\momon\\OneDrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\GitHub\\CppMiniGame_BattleSimulator\\KonaBattle\\KonaBattle\\character\\character_manager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -92,25 +92,25 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 105,
+          "DockedWidth": 340,
           "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 1,
               "Title": "log_manager.h",
               "DocumentMoniker": "C:\\Users\\momon\\OneDrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\GitHub\\CppMiniGame_BattleSimulator\\KonaBattle\\KonaBattle\\game_mode\\log_manager.h",
               "RelativeDocumentMoniker": "KonaBattle\\game_mode\\log_manager.h",
               "ToolTip": "C:\\Users\\momon\\OneDrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\GitHub\\CppMiniGame_BattleSimulator\\KonaBattle\\KonaBattle\\game_mode\\log_manager.h",
               "RelativeToolTip": "KonaBattle\\game_mode\\log_manager.h",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAmwBAAAAACAAAAAAAAAA==",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAowCMAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-06-22T13:46:03.099Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "chara_base.h",
               "DocumentMoniker": "C:\\Users\\momon\\OneDrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\GitHub\\CppMiniGame_BattleSimulator\\KonaBattle\\KonaBattle\\character\\chara_base.h",
               "RelativeDocumentMoniker": "KonaBattle\\character\\chara_base.h",
@@ -118,8 +118,7 @@
               "RelativeToolTip": "KonaBattle\\character\\chara_base.h",
               "ViewState": "AgIAAC0AAAAAAAAAAAAAAEIAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-06-28T01:40:33.42Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-28T01:40:33.42Z"
             },
             {
               "$type": "Document",
@@ -172,26 +171,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "log_manager.cpp",
               "DocumentMoniker": "C:\\Users\\momon\\OneDrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\GitHub\\CppMiniGame_BattleSimulator\\KonaBattle\\KonaBattle\\game_mode\\log_manager.cpp",
               "RelativeDocumentMoniker": "KonaBattle\\game_mode\\log_manager.cpp",
-              "ToolTip": "C:\\Users\\momon\\OneDrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\GitHub\\CppMiniGame_BattleSimulator\\KonaBattle\\KonaBattle\\game_mode\\log_manager.cpp",
-              "RelativeToolTip": "KonaBattle\\game_mode\\log_manager.cpp",
-              "ViewState": "AgIAACIAAAAAAAAAAAAQwD4AAAABAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\momon\\OneDrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\GitHub\\CppMiniGame_BattleSimulator\\KonaBattle\\KonaBattle\\game_mode\\log_manager.cpp*",
+              "RelativeToolTip": "KonaBattle\\game_mode\\log_manager.cpp*",
+              "ViewState": "AgIAACUAAAAAAAAAAAAowEIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-06-30T07:06:52.231Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "ui_manager.h",
               "DocumentMoniker": "C:\\Users\\momon\\OneDrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\GitHub\\CppMiniGame_BattleSimulator\\KonaBattle\\KonaBattle\\ui\\ui_manager.h",
               "RelativeDocumentMoniker": "KonaBattle\\ui\\ui_manager.h",
               "ToolTip": "C:\\Users\\momon\\OneDrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\GitHub\\CppMiniGame_BattleSimulator\\KonaBattle\\KonaBattle\\ui\\ui_manager.h",
               "RelativeToolTip": "KonaBattle\\ui\\ui_manager.h",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAABkAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-06-28T01:48:56.618Z",
               "EditorCaption": ""
@@ -210,13 +209,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 5,
               "Title": "chara_base.cpp",
               "DocumentMoniker": "C:\\Users\\momon\\OneDrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\GitHub\\CppMiniGame_BattleSimulator\\KonaBattle\\KonaBattle\\character\\chara_base.cpp",
               "RelativeDocumentMoniker": "KonaBattle\\character\\chara_base.cpp",
               "ToolTip": "C:\\Users\\momon\\OneDrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\GitHub\\CppMiniGame_BattleSimulator\\KonaBattle\\KonaBattle\\character\\chara_base.cpp",
               "RelativeToolTip": "KonaBattle\\character\\chara_base.cpp",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAAADsAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAiwCAAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-06-22T09:24:00.478Z",
               "EditorCaption": ""
@@ -245,78 +244,26 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-06-29T08:10:53.276Z"
-            }
-          ]
-        },
-        {
-          "DockedWidth": 635,
-          "SelectedChildIndex": 4,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "state_defs.h",
-              "DocumentMoniker": "C:\\Users\\momon\\OneDrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\GitHub\\CppMiniGame_BattleSimulator\\KonaBattle\\KonaBattle\\defs\\state_defs.h",
-              "RelativeDocumentMoniker": "KonaBattle\\defs\\state_defs.h",
-              "ToolTip": "C:\\Users\\momon\\OneDrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\GitHub\\CppMiniGame_BattleSimulator\\KonaBattle\\KonaBattle\\defs\\state_defs.h",
-              "RelativeToolTip": "KonaBattle\\defs\\state_defs.h",
-              "ViewState": "AgIAAAMAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-07-03T14:46:04.615Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "state_defs.cpp",
-              "DocumentMoniker": "C:\\Users\\momon\\OneDrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\GitHub\\CppMiniGame_BattleSimulator\\KonaBattle\\KonaBattle\\defs\\state_defs.cpp",
-              "RelativeDocumentMoniker": "KonaBattle\\defs\\state_defs.cpp",
-              "ToolTip": "C:\\Users\\momon\\OneDrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\GitHub\\CppMiniGame_BattleSimulator\\KonaBattle\\KonaBattle\\defs\\state_defs.cpp",
-              "RelativeToolTip": "KonaBattle\\defs\\state_defs.cpp",
-              "ViewState": "AgIAAE0AAAAAAAAAAAAAAGIAAAAZAAAAAAAAAA==",
+              "Title": "ui_manager.cpp",
+              "DocumentMoniker": "C:\\Users\\momon\\OneDrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\GitHub\\CppMiniGame_BattleSimulator\\KonaBattle\\KonaBattle\\ui\\ui_manager.cpp",
+              "RelativeDocumentMoniker": "KonaBattle\\ui\\ui_manager.cpp",
+              "ToolTip": "C:\\Users\\momon\\OneDrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\GitHub\\CppMiniGame_BattleSimulator\\KonaBattle\\KonaBattle\\ui\\ui_manager.cpp",
+              "RelativeToolTip": "KonaBattle\\ui\\ui_manager.cpp",
+              "ViewState": "AgIAACkAAAAAAAAAAAAQwDsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-07-03T14:32:46.125Z",
+              "WhenOpened": "2025-06-28T02:47:15.979Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "defs.h",
-              "DocumentMoniker": "C:\\Users\\momon\\OneDrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\GitHub\\CppMiniGame_BattleSimulator\\KonaBattle\\KonaBattle\\defs\\defs.h",
-              "RelativeDocumentMoniker": "KonaBattle\\defs\\defs.h",
-              "ToolTip": "C:\\Users\\momon\\OneDrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\GitHub\\CppMiniGame_BattleSimulator\\KonaBattle\\KonaBattle\\defs\\defs.h",
-              "RelativeToolTip": "KonaBattle\\defs\\defs.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-07-03T14:25:35.649Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "behavior_defs.h",
-              "DocumentMoniker": "C:\\Users\\momon\\OneDrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\GitHub\\CppMiniGame_BattleSimulator\\KonaBattle\\KonaBattle\\defs\\behavior_defs.h",
-              "RelativeDocumentMoniker": "KonaBattle\\defs\\behavior_defs.h",
-              "ToolTip": "C:\\Users\\momon\\OneDrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\GitHub\\CppMiniGame_BattleSimulator\\KonaBattle\\KonaBattle\\defs\\behavior_defs.h",
-              "RelativeToolTip": "KonaBattle\\defs\\behavior_defs.h",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAawBkAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-07-03T14:11:45.968Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "behavior_defs.cpp",
-              "DocumentMoniker": "C:\\Users\\momon\\OneDrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\GitHub\\CppMiniGame_BattleSimulator\\KonaBattle\\KonaBattle\\defs\\behavior_defs.cpp",
-              "RelativeDocumentMoniker": "KonaBattle\\defs\\behavior_defs.cpp",
-              "ToolTip": "C:\\Users\\momon\\OneDrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\GitHub\\CppMiniGame_BattleSimulator\\KonaBattle\\KonaBattle\\defs\\behavior_defs.cpp*",
-              "RelativeToolTip": "KonaBattle\\defs\\behavior_defs.cpp*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-07-03T14:11:11.373Z",
-              "EditorCaption": ""
-            },
+            }
+          ]
+        },
+        {
+          "DockedWidth": 400,
+          "SelectedChildIndex": 8,
+          "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
@@ -332,6 +279,70 @@
             {
               "$type": "Bookmark",
               "Name": "ST:2:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "state_defs.h",
+              "DocumentMoniker": "C:\\Users\\momon\\OneDrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\GitHub\\CppMiniGame_BattleSimulator\\KonaBattle\\KonaBattle\\defs\\state_defs.h",
+              "RelativeDocumentMoniker": "KonaBattle\\defs\\state_defs.h",
+              "ToolTip": "C:\\Users\\momon\\OneDrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\GitHub\\CppMiniGame_BattleSimulator\\KonaBattle\\KonaBattle\\defs\\state_defs.h",
+              "RelativeToolTip": "KonaBattle\\defs\\state_defs.h",
+              "ViewState": "AgIAAAMAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-07-03T14:46:04.615Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "state_defs.cpp",
+              "DocumentMoniker": "C:\\Users\\momon\\OneDrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\GitHub\\CppMiniGame_BattleSimulator\\KonaBattle\\KonaBattle\\defs\\state_defs.cpp",
+              "RelativeDocumentMoniker": "KonaBattle\\defs\\state_defs.cpp",
+              "ToolTip": "C:\\Users\\momon\\OneDrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\GitHub\\CppMiniGame_BattleSimulator\\KonaBattle\\KonaBattle\\defs\\state_defs.cpp",
+              "RelativeToolTip": "KonaBattle\\defs\\state_defs.cpp",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAAAGAAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-07-03T14:32:46.125Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "defs.h",
+              "DocumentMoniker": "C:\\Users\\momon\\OneDrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\GitHub\\CppMiniGame_BattleSimulator\\KonaBattle\\KonaBattle\\defs\\defs.h",
+              "RelativeDocumentMoniker": "KonaBattle\\defs\\defs.h",
+              "ToolTip": "C:\\Users\\momon\\OneDrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\GitHub\\CppMiniGame_BattleSimulator\\KonaBattle\\KonaBattle\\defs\\defs.h",
+              "RelativeToolTip": "KonaBattle\\defs\\defs.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-07-03T14:25:35.649Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "behavior_defs.h",
+              "DocumentMoniker": "C:\\Users\\momon\\OneDrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\GitHub\\CppMiniGame_BattleSimulator\\KonaBattle\\KonaBattle\\defs\\behavior_defs.h",
+              "RelativeDocumentMoniker": "KonaBattle\\defs\\behavior_defs.h",
+              "ToolTip": "C:\\Users\\momon\\OneDrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\GitHub\\CppMiniGame_BattleSimulator\\KonaBattle\\KonaBattle\\defs\\behavior_defs.h",
+              "RelativeToolTip": "KonaBattle\\defs\\behavior_defs.h",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABUAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-07-03T14:11:45.968Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "behavior_defs.cpp",
+              "DocumentMoniker": "C:\\Users\\momon\\OneDrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\GitHub\\CppMiniGame_BattleSimulator\\KonaBattle\\KonaBattle\\defs\\behavior_defs.cpp",
+              "RelativeDocumentMoniker": "KonaBattle\\defs\\behavior_defs.cpp",
+              "ToolTip": "C:\\Users\\momon\\OneDrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\GitHub\\CppMiniGame_BattleSimulator\\KonaBattle\\KonaBattle\\defs\\behavior_defs.cpp",
+              "RelativeToolTip": "KonaBattle\\defs\\behavior_defs.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-07-03T14:11:11.373Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -359,19 +370,6 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ui_manager.cpp",
-              "DocumentMoniker": "C:\\Users\\momon\\OneDrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\GitHub\\CppMiniGame_BattleSimulator\\KonaBattle\\KonaBattle\\ui\\ui_manager.cpp",
-              "RelativeDocumentMoniker": "KonaBattle\\ui\\ui_manager.cpp",
-              "ToolTip": "C:\\Users\\momon\\OneDrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\GitHub\\CppMiniGame_BattleSimulator\\KonaBattle\\KonaBattle\\ui\\ui_manager.cpp",
-              "RelativeToolTip": "KonaBattle\\ui\\ui_manager.cpp",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAAAFIAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-06-28T02:47:15.979Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 19,
               "Title": "player.h",
               "DocumentMoniker": "C:\\Users\\momon\\OneDrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\GitHub\\CppMiniGame_BattleSimulator\\KonaBattle\\KonaBattle\\character\\player.h",
@@ -380,8 +378,7 @@
               "RelativeToolTip": "KonaBattle\\character\\player.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-06-28T05:51:32.066Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-28T05:51:32.066Z"
             }
           ]
         }

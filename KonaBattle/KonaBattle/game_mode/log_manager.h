@@ -5,15 +5,15 @@
 
 struct ActionLog
 {
-    const std::string ATTACKER_NAME{};         // 行動したキャラ名
-    const std::string TARGET_NAME{};        // 対象キャラ名（省略可）
-    const BehaviorPattern BEHAVIOR{}; // 行動の種類（攻撃、防御など）
+    std::string attacker_name{};         // 行動したキャラ名
+    std::string target_name{};        // 対象キャラ名（省略可）
+    BehaviorPattern behavior{}; // 行動の種類（攻撃、防御など）
     int damage{};                 // 与えたダメージ（攻撃の場合）
     std::vector<character::State> added_state{}; // 状態異常（毒など）
     ActionLog(std::string attacker_name, std::string target_name, const BehaviorPattern BEHAVIOR)
-        :ATTACKER_NAME(std::move(attacker_name))
-        , TARGET_NAME(std::move(target_name))
-        , BEHAVIOR(BEHAVIOR) {}
+        :attacker_name(std::move(attacker_name))
+        , target_name(std::move(target_name))
+        , behavior(BEHAVIOR) {}
 };
 
 class LogManager
@@ -33,15 +33,13 @@ public:
     {
         return log_manager_;
     }
-    void ShowRecentLog(const int NUM);
+    void ShowRecentLog(const int NUM) const;
 
 private:
     // コンストラクタの隠蔽
     LogManager() {};
-    LogManager(const LogManager& obj) {};
+    LogManager(const LogManager& obj) = delete;
     // 行動を文字に直す
-    const std::string BehaviorToString(const BehaviorPattern PATTERN) const;
-    const std::string StateToString(const character::State STATE) const;
     void ShowOneLog(const ActionLog& log) const;
 private:
     std::vector<ActionLog> behavior_log_{};	// 行動履歴

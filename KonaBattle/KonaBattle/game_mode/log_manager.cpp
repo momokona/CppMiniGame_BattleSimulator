@@ -1,9 +1,11 @@
 #include "log_manager.h"
 #include <iostream>
-#include"../defs/defs.h"
 #include <cassert>
 #include <unordered_map>
 #include <algorithm>
+#include"../defs/defs.h"
+#include "../defs/state_defs.h"
+#include "../defs/behavior_defs.h"
 LogManager* LogManager::log_manager_ = nullptr;
 
 void LogManager::Create()
@@ -22,76 +24,51 @@ void LogManager::ShowLog() const
     printf("**í—ð‚Ü‚Æ‚ß**\n");
     printf("\n");
     for (const auto& log : behavior_log_)
-	{
+    {
         ShowOneLog(log);
-	}
+    }
 }
 
 void LogManager::ShowOneLog(const ActionLog& log) const
 {
-    const std::string BEHAVIIOR = BehaviorToString(log.BEHAVIOR);
-    std::string state{};
+    const std::string BEHAVIIOR = behavior::GetBehaviorName(log.behavior);
+    std::string state_str{};
     for (const auto add_state : log.added_state)
     {
-        if (state != "")
+        if (state_str != "")
         {
-            state += ", ";
+            state_str += ", ";
         }
-        state += StateToString(add_state);
+        state_str += state_map::GetStateName(add_state);
     }
 
-    printf("UŒ‚ŽÒ:%s\n", log.ATTACKER_NAME.c_str());
-    printf("ƒ^[ƒQƒbƒg:%s\n", log.TARGET_NAME.c_str());
+    printf("UŒ‚ŽÒ:%s\n", log.attacker_name.c_str());
+    printf("ƒ^[ƒQƒbƒg:%s\n", log.target_name.c_str());
     printf("s“®:%s\n", BEHAVIIOR.c_str());
-    if (!log.added_state.empty())
+    if (!state_str.empty())
     {
-        printf("—^‚¦‚½ó‘ÔˆÙíF%s\n", state.c_str());
+        printf("—^‚¦‚½ó‘ÔˆÙíF%s\n", state_str.c_str());
     }
-    if (log.BEHAVIOR == BehaviorPattern::ATTACK || log.damage > 0)
+    if (log.behavior == BehaviorPattern::ATTACK || log.damage > 0)
     {
         printf("—^‚¦‚½ƒ_ƒ[ƒWF%d\n", log.damage);
     }
     printf("\n");
 }
 
-void LogManager::ShowRecentLog(const int NUM)
+void LogManager::ShowRecentLog(const int NUM) const
 {
-    std::for_each(behavior_log_.end() - NUM, behavior_log_.end(), [&](const auto LOG)
+    // ”ÍˆÍŠO‚É‚È‚ç‚È‚¢‚æ‚¤‚É
+    auto it_begin = behavior_log_.begin();
+    if (behavior_log_.size() > NUM)
+    {
+        it_begin = behavior_log_.end() - NUM;
+    }
+
+    std::for_each(it_begin, behavior_log_.end(), [&](const auto LOG)
         {
             ShowOneLog(LOG);
         });
-}
-
-const std::string LogManager::BehaviorToString(const BehaviorPattern PATTERN) const
-{
-    static const std::unordered_map<BehaviorPattern, std::string> BEHAVIOR_NAME_MAP =
-    {
-        {BehaviorPattern::ATTACK, "UŒ‚"},
-        {BehaviorPattern::DEFENSE, "–hŒä"},
-        {BehaviorPattern::ITEM, "ƒAƒCƒeƒ€"},
-        {BehaviorPattern::POISON, "“ÅUŒ‚"},
-    };
-    const auto it = BEHAVIOR_NAME_MAP.find(PATTERN);
-    if (it != BEHAVIOR_NAME_MAP.end())
-    {
-        return it->second;
-    }
-    return "•s–¾";
-}
-
-const std::string LogManager::StateToString(const character::State STATE) const
-{
-    static const std::unordered_map<character::State, std::string> STATE_NAME_MAP =
-    {
-        {character::State::NORMAL, "’Êí"},
-        {character::State::POISON, "“Å"},
-    };
-    const auto it = STATE_NAME_MAP.find(STATE);
-    if (it != STATE_NAME_MAP.end())
-    {
-        return it->second;
-    }
-    return "•s–¾";
 }
 
 

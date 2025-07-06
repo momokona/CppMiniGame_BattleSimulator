@@ -5,6 +5,7 @@
 #include<conio.h>
 #include "../character/character_manager.h"
 #include "../defs/state_defs.h"
+#include "../defs/behavior_defs.h"
 UiManager* UiManager::ui_manager_ = nullptr;
 
 void UiManager::Create()
@@ -51,29 +52,18 @@ void UiManager::ShowActionOptions() const
 	printf("\n\n");
 	printf("%sのターン！どうする？\n", std::string(PLAYER_NAME).c_str());
 	printf("1. 攻撃  2.  防御  3. アイテム\n");
+	char input{};
 	while (1)
 	{
-		bool correct_choice = true;
-		switch (_getch())
+		input = _getch();
+		
+		const auto SELECTED_BEHAVIOR = behavior::GetSelectBehavior(input);
+		if (SELECTED_BEHAVIOR != BehaviorPattern::INVALID)
 		{
-		case '1':
-			character::SetChoiceAction(BehaviorPattern::ATTACK);
-			break;
-		case '2':
-			character::SetChoiceAction(BehaviorPattern::DEFENSE);
-			break;
-		case '3':
-			character::SetChoiceAction(BehaviorPattern::ITEM);
-			break;
-		default:
-			printf("1～3を選択してください。\n");
-			correct_choice = false;
+			character::SetChoiceAction(SELECTED_BEHAVIOR);
 			break;
 		}
-		if (correct_choice)
-		{
-			break;
-		}
+		printf("1～3を選択してください。\n");
 	}
 	system("cls");
 }
@@ -81,24 +71,7 @@ void UiManager::ShowActionOptions() const
 void UiManager::DispBehavior(const BehaviorPattern BEHAVIOR, const std::string& ATTACKER_NAME)
 {
 	printf("\n");
-	switch (BEHAVIOR)
-	{
-	case BehaviorPattern::ATTACK:
-		printf("%sの攻撃！\n", ATTACKER_NAME.c_str());
-		break;
-	case BehaviorPattern::ITEM:
-		printf("%sはアイテムを使った！！\n", ATTACKER_NAME.c_str());
-		printf("アイテムは未実装なので毒状態にします。\n");
-		break;
-	case BehaviorPattern::DEFENSE:
-		printf("%sは身を守った！！\n", ATTACKER_NAME.c_str());
-		break;
-	case BehaviorPattern::POISON:
-		printf("%sは毒攻撃を仕掛けてきた！！\n", ATTACKER_NAME.c_str());
-		break;
-	default:
-		break;
-	}
+	printf(behavior::GetMessage(BEHAVIOR).c_str(), ATTACKER_NAME.c_str());
 }
 
 void UiManager::DispEndGame() const
